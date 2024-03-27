@@ -1,0 +1,1444 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>增强现实空间感知 | 像一个灯塔一样，燃烧自我，照射光明</title><meta name="author" content="hyh"><meta name="copyright" content="hyh"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="增强现实空间感知  *硕 士 学 位 论 文*   *增强现实空间感知关键技术及应用研究* 学  生  姓  名   侯耀辉       学      号   2021312120113   学科(专业学位)  计算机科学与技术  研  究  方  向            导      师   王立军      2024****年  2****月 19****日 Research on Key">
+<meta property="og:type" content="article">
+<meta property="og:title" content="增强现实空间感知">
+<meta property="og:url" content="https://hyh16601377106.github.io/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/index.html">
+<meta property="og:site_name" content="像一个灯塔一样，燃烧自我，照射光明">
+<meta property="og:description" content="增强现实空间感知  *硕 士 学 位 论 文*   *增强现实空间感知关键技术及应用研究* 学  生  姓  名   侯耀辉       学      号   2021312120113   学科(专业学位)  计算机科学与技术  研  究  方  向            导      师   王立军      2024****年  2****月 19****日 Research on Key">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hyh16601377106.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2024-03-26T13:15:02.000Z">
+<meta property="article:modified_time" content="2024-03-26T13:17:25.267Z">
+<meta property="article:author" content="hyh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hyh16601377106.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hyh16601377106.github.io/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '增强现实空间感知',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-26 21:17:25'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jiazai.png" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="像一个灯塔一样，燃烧自我，照射光明"><span class="site-name">像一个灯塔一样，燃烧自我，照射光明</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">增强现实空间感知</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-26T13:15:02.000Z" title="发表于 2024-03-26 21:15:02">2024-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-26T13:17:25.267Z" title="更新于 2024-03-26 21:17:25">2024-03-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">30.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>96分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="增强现实空间感知"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>增强现实空间感知</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps73-1711458934797-1.png" alt="img"></p>
+<p><em><strong>*硕 士 学 位 论 文*</strong></em></p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps74-1711458934797-2.png" alt="img"> </p>
+<p><em><strong>*增强现实空间感知关键技术及应用研究*</strong></em></p>
+<p>学  生  姓  名   侯耀辉      </p>
+<p>学      号   2021312120113  </p>
+<p>学科(专业学位)  计算机科学与技术 </p>
+<p>研  究  方  向           </p>
+<p>导      师   王立军     </p>
+<p><strong>2024****年</strong>  <strong>2****月</strong> <strong>19****日</strong></p>
+<p><strong>Research on Key Technologies and Applications of Augmented Reality Space Perception</strong></p>
+<p><strong>By</strong></p>
+<p><strong>Y****aohui</strong> <strong>Hou</strong></p>
+<p><strong>A Dissertation Submitted to</strong></p>
+<p><strong>North China University of Technology</strong></p>
+<p><strong>In partial fulfillment of the requirement</strong></p>
+<p><strong>For the degree of</strong> </p>
+<p><strong>Master of Engineering</strong></p>
+<p><strong>North China University of Technology</strong></p>
+<p><strong>02, 2024</strong></p>
+<p>**<br>**	</p>
+<p><em><strong>*北方工业大学学位论文原创性声明*</strong></em></p>
+<p>本人郑重声明：所呈交的学位论文，是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。</p>
+<p>学位论文作者签名：                  日期：     年     月    日</p>
+<p><em><strong>*学位论文使用授权书*</strong></em></p>
+<p>学位论文作者完全了解北方工业大学有关保留和使用学位论文的规定，即：研究生在校攻读学位期间论文工作的知识产权单位属北方工业大学。学校有权保留并向国家有关部门或机构送交论文的复印件和电子版，允许学位论文被查阅和借阅；学校可以公布学位论文的全部或部分内容，可以允许采用影印、缩印或其它复制手段保存、汇编学位论文（保密的学位论文在解密后适用于本授权书）。</p>
+<p>□ 保密论文注释：经本人申请，学校批准，本学位论文定为保密论文，密级：   ，期限：   年，自     年    月    日起至    年    月    日止，解密后适用本授权书。</p>
+<p>□ 非保密论文注释：本学位论文不属于保密范围，适用本授权书。</p>
+<p>​    本人签名：                    日期：                 </p>
+<p>导师签名：                    日期：                 </p>
+<p><em><strong>*增强现实空间感知关键技术及应用研究*</strong></em></p>
+<h1 id="摘-要"><a href="#摘-要" class="headerlink" title="*摘* *要*"></a><em><strong>*摘*</strong></em> <em><strong>*要*</strong></em></h1><p>本文的研究源自于国家重点专项——航空医学应急救援沉浸式模拟训练系统。在紧急救援场景中，引入增强现实感知头盔，旨在提升救援人员的空间感知能力。本研究侧重于对灾害救援空间进行实时三维重建功能，一方面是让后方人员能够比二维视频更好地了解现场情况，另一方面实时三维重建是增强现实高级功能的基础，旨在探索国外垄断的增强感知技术。</p>
+<p>采用了BundleFusion深度相机三维重建方法，但在此过程中遇到了两个问题：物体部分元素缺失和重建模型噪声问题。为解决这些问题，我们首先对深度相机采集的数据进行自适应中值滤波，减少细小空洞和数据噪声。针对问题一，我们对深度数据进行噪声分析，并设计了三种插值填补方案来解决噪声空洞的问题。针对问题二，我们采用了改进的SIFT特征点关键点检测和RANSAC特征点匹配方法，以获取更多的匹配特征点。</p>
+<p>经过我们的改进方法，可视化实验和定量分析结果显示，针对问题一，我们成功补全了缺失的座位把手，改进后PLY文件的面数增加了87%，点数减少了81%。针对问题二，重建模型的噪声得到有效消除，改进后的SIFT算法匹配特征点的数量增加了8%，检测时间降低了20%。</p>
+<p>本研究在实践中取得了显著效果，为救援人员提供了更好的空间感知能力。未来，我们将进一步完善系统，以提高重建精度和实时性，以应对更加复杂的救援场景。</p>
+<p>****关键字：****增强现实感知，实时三维重建，空洞填补，特征点匹配</p>
+<p><em><strong>*Research on Key Technologies and Applications of Augmented Reality Space Perception*</strong></em></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="*Abstract*"></a><em><strong>*Abstract*</strong></em></h1><p>This study is based on the national key project—aviation medical emergency rescue immersive simulation training system. In emergency rescue scenarios, augmented reality perception helmets are introduced to enhance rescuers’ spatial perception. The study focuses on the real-time three-dimensional reconstruction of disaster rescue spaces. On one hand, it allows rear personnel to better understand the scene than two-dimensional video. On the other hand, real-time three-dimensional reconstruction is the foundation for advanced augmented reality functions, aiming to explore foreign monopolized enhanced perception technology.</p>
+<p>The BundleFusion depth camera 3D reconstruction method was used, but two problems were encountered: missing elements of objects and reconstruction model noise. To solve these problems, we first applied adaptive median filtering to the data collected by the depth camera to reduce small holes and data noise. For the first problem, we conducted noise analysis on depth data and designed three interpolation filling schemes to address the issue of noise holes. For the second problem, we adopted the improved SIFT key point detection and RANSAC feature point matching methods to obtain more matching feature points.</p>
+<p>After our improvements, the results of visual experiments and quantitative analysis showed that for the first problem, we successfully completed the missing seat handle. After the improvement, the number of faces of the PLY file increased by 87%, and the number of points was reduced by 81%. For the second problem, the noise of the reconstructed model was effectively eliminated, the number of matching feature points increased by 8% with the improved SIFT algorithm, and the detection time was reduced by 20%.</p>
+<p>This study has achieved significant results in practice, providing rescuers with better spatial awareness. In the future, we will further improve the system to enhance reconstruction accuracy and real-time performance, to cope with more complex rescue scenarios.</p>
+<p><em><strong>*Keywords:*</strong></em> augmented reality perception, real-time 3D reconstruction, hole filling, feature point matching</p>
+<p>目  录</p>
+<p><a href="#_Toc160461821">摘  要	</a></p>
+<p><a href="#_Toc160461822">Abstract	</a></p>
+<p><a href="#_Toc160461823">第一章 绪论	</a></p>
+<p><a href="#_Toc160461824">1.1 研究背景及目的	</a></p>
+<p><a href="#_Toc160461825">1.2 国内外研究现状	</a></p>
+<p><a href="#_Toc160461826">1.2.1 空间深度测量方法	</a></p>
+<p><a href="#_Toc160461827">1.2.2 三维重建相关方法	</a></p>
+<p><a href="#_Toc160461828">1.2.3 三维模型几种表现方式	</a></p>
+<p><a href="#_Toc160461829">1.2.4 增强现实显示原理	</a></p>
+<p><a href="#_Toc160461830">1.2.5 研究内容	</a></p>
+<p><a href="#_Toc160461831">第二章 空间深度数据获取和预处理	</a></p>
+<p><a href="#_Toc160461832">2.1 几种获取深度信息方式对比	</a></p>
+<p><a href="#_Toc160461833">2.1.1 单目slam重建	</a></p>
+<p><a href="#_Toc160461834">2.1.2 双目视觉获取深度	</a></p>
+<p><a href="#_Toc160461835">2.1.3 单目深度学习获取深度	</a></p>
+<p><a href="#_Toc160461836">2.1.4 深度相机获取深度	</a></p>
+<p><a href="#_Toc160461837">2.2 深度数据获取和空洞分析	</a></p>
+<p><a href="#_Toc160461838">2.2.1 RGBD数据集介绍	</a></p>
+<p><a href="#_Toc160461839">2.2.2 数据集制作	</a></p>
+<p><a href="#_Toc160461840">2.2.3 数据噪声分析	</a></p>
+<p><a href="#_Toc160461841">2.3 深度数据滤波	</a></p>
+<p><a href="#_Toc160461842">2.3.1 自适应中值滤波	</a></p>
+<p><a href="#_Toc160461843">2.3.2 高斯滤波	</a></p>
+<p><a href="#_Toc160461844">2.3.3 双边滤波	</a></p>
+<p><a href="#_Toc160461845">2.4 改进的深度数据滤波和空洞补全算法	</a></p>
+<p><a href="#_Toc160461846">2.5 深度图滤波与补全实验	</a></p>
+<p><a href="#_Toc160461847">2.6 本章总结	</a></p>
+<p><a href="#_Toc160461848">第三章 图像数据特征点检测匹配和滤波	</a></p>
+<p><a href="#_Toc160461849">3.1 特征点检测	</a></p>
+<p><a href="#_Toc160461850">3.1.1 ORB算法	</a></p>
+<p><a href="#_Toc160461851">3.1.2 SIFT算法	</a></p>
+<p><a href="#_Toc160461852">3.1.3 SURF算法	</a></p>
+<p><a href="#_Toc160461853">3.2 特征匹配过滤	</a></p>
+<p><a href="#_Toc160461854">3.2.1 常见特征匹配	</a></p>
+<p><a href="#_Toc160461855">3.2.2 随机采样一致性匹配	</a></p>
+<p><a href="#_Toc160461856">3.3 改进的特征点检测和匹配算法	</a></p>
+<p><a href="#_Toc160461857">3.4 特征检测和特征匹配实验结果	</a></p>
+<p><a href="#_Toc160461858">3.5 本章总结	</a></p>
+<p><a href="#_Toc160461859">第四章 基于深度数据和特征融合的三维重建	</a></p>
+<p><a href="#_Toc160461860">4.1 三维重建算法框架	</a></p>
+<p><a href="#_Toc160461861">4.2 相机位姿求解	</a></p>
+<p><a href="#_Toc160461862">4.3 TSDF数据融合	</a></p>
+<p><a href="#_Toc160461863">4.4 曲面重建和纹理映射	</a></p>
+<p><a href="#_Toc160461864">4.5 实时重建可视化分析	</a></p>
+<p><a href="#_Toc160461865">4.6 本章小结	</a></p>
+<p><a href="#_Toc160461866">第五章 基于增强现实显示的空间感知系统	</a></p>
+<p><a href="#_Toc160461867">5.1 增强现实感知系统实现	</a></p>
+<p><a href="#_Toc160461868">5.1.1 软件平台搭建	</a></p>
+<p><a href="#_Toc160461869">5.1.2 硬件平台搭建	</a></p>
+<p><a href="#_Toc160461870">5.2 系统仿真和测试	</a></p>
+<p><a href="#_Toc160461871">5.2.1 三维重建	</a></p>
+<p><a href="#_Toc160461872">5.2.2 增强现实显示	</a></p>
+<p><a href="#_Toc160461873">5.2.3 气体检测	</a></p>
+<p><a href="#_Toc160461874">5.3 本章小结	</a></p>
+<p><a href="#_Toc160461875">第六章 结论与展望	</a></p>
+<p><a href="#_Toc160461876">6.1 主要结论	</a></p>
+<p><a href="#_Toc160461877">6.2 研究展望	</a></p>
+<p><a href="#_Toc160461878">参考文献	</a></p>
+<p><a href="#_Toc160461879">附录 A	</a></p>
+<p><a href="#_Toc160461880">在学期间的研究成果	</a></p>
+<h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 *绪论*"></a><strong>第一章</strong> <em><strong>*绪论*</strong></em></h1><h2 id="一-1-研究背景及目的"><a href="#一-1-研究背景及目的" class="headerlink" title="一.1 *研究背景及目的*"></a><strong>一.1</strong> <em><strong>*研究背景及目的*</strong></em></h2><p>本文的研究源自于国家重点专项——航空医学应急救援沉浸式模拟训练系统。本论文的研究内容是：在灾害发生不久的救援场景下，使用自制增强现实显示头盔，在救援人员进入室内灾害场景时提供救援人员空间感知的帮助，旨在为我国灾害救援场景下对救援人员提供更多的保护。</p>
+<p>为了更好地增强救援人员的空间感知能力，本文充分考虑了灾害场景下可能出现的各种情况，如黑暗无光、瓦斯泄露、红外感知等，自主设计了红外夜视、深度空间感知、气体检测、增强现实显示等功能。本文侧重于对灾害救援空间进行实时三维重建功能，一方面是让后方人员能够更清晰地了解现场情况，另一方面实时三维重建是增强现实高级功能的基础，旨在探索国外垄断的增强感知技术，本次课题选择具有良好的现实意义和发展潜力。</p>
+<p>本文旨在探索国外增强显示的关键技术，由于国外对此算法仍是垄断，故在一开始使用多种方式尝试空间感知，但效果仍不理想。因此，针对增强现实的基础——实时三维重建进行了大胆尝试，最终在探索的过程中完成了本次项目的实现。本文的行文逻辑按照制作系统的先后顺序进行，第五章描述了感知系统的硬件基础和最终效果。</p>
+<h2 id="一-2-国内外研究现状"><a href="#一-2-国内外研究现状" class="headerlink" title="一.2 *国内外研究现状*"></a><strong>一.2</strong> <em><strong>*国内外研究现状*</strong></em></h2><h3 id="一-2-1-空间-深度测量-方法"><a href="#一-2-1-空间-深度测量-方法" class="headerlink" title="一.2.1 *空间**深度测量**方法*"></a><strong>一.2.1</strong> <em><strong>*空间*</strong></em><em><strong>*深度测量*</strong></em><em><strong>*方法*</strong></em></h3><p>增强现实（Augmented Reality，AR）中的空间感知方法是指用于识别和跟踪物理世界中的三维空间和物体的技术，以便在虚拟和现实世界之间创建无缝的交互。以下是一些常见的获取空间信息的方法和技术：</p>
+<p>1.摄像头和传感器。RGB摄像头常见于智能手机和AR眼镜，用于捕捉周围环境的图像，而深度摄像头如Intel RealSense、Microsoft Kinect等，则能够获取物体的深度信息，从而实现更准确的空间感知。此外，陀螺仪和加速度计用于检测设备的方向、倾斜和移动，支持空间跟踪的实现。而GPS系统则可确定设备的全球位置，为室外AR应用提供精准的定位服务。这些技术的结合使得增强现实应用能够更好地与用户的环境进行交互，提供更丰富、更沉浸式的体验。</p>
+<p>2.视觉标记和特征检测。AR标记是在物体上添加特殊的标记或图案，摄像头可以识别这些标记，并确定物体的位置和方向。而特征检测则是通过识别现实世界中的特征点、边缘、角点等来进行跟踪和定位，这一技术常用于SLAM（Simultaneous Localization and Mapping）技术，帮助设备实现对自身位置的精确定位和地图构建。这些方法的结合使得增强现实应用能够准确地与现实世界进行交互，为用户提供更加丰富和沉浸式的体验。</p>
+<p>3.SLAM技术。同时定位与地图构建技术是增强现实应用中的关键组成部分。它能够实时跟踪设备在三维空间中的位置，并生成地图以供AR应用使用。视觉SLAM利用视觉信息实现这一目标，通常包括对摄像头拍摄的图像特征的跟踪和匹配。而激光SLAM则利用激光雷达等传感器进行定位和地图构建，适用于各种室内或室外的AR场景。这些SLAM技术的发展为增强现实技术的实时定位和环境感知提供了重要支持，为用户提供了更加沉浸式和精确的增强现实体验。</p>
+<p>4.深度学习模型被广泛应用于物体识别、姿态估计和语义分割等任务，从而提高了AR系统对物体的识别和跟踪能力。通过结合摄像头和深度学习模型，实现了实时物体检测，使得AR系统能够在现实世界中实时地检测和跟踪各种物体，为用户提供更加丰富和智能的增强现实体验。</p>
+<h3 id="一-2-2-三维重建相关方法"><a href="#一-2-2-三维重建相关方法" class="headerlink" title="一.2.2 *三维重建相关方法*"></a><strong>一.2.2</strong> <em><strong>*三维重建相关方法*</strong></em></h3><p>三维重建是从二维图像或传感器数据中创建三维场景或对象模型的过程。有许多不同的方法和技术路线可以用于三维重建，以下是其中一些典型的方法：</p>
+<p>1.光学方法：立体视觉利用两个或多个摄像头捕捉同一场景的不同视角，通过计算视差来估计深度信息，从而创建三维点云。而结构光扫描则是通过投射结构化光条或光栅图案到物体表面，然后利用摄像头捕捉物体表面的变形，从而推断出物体的三维形状。这两种技术在增强现实领域起着关键作用，为实现更准确的空间感知和环境重建提供了重要手段。</p>
+<p>2.时间飞行法：时间飞行摄影利用时间飞行相机测量从相机到物体表面的光传播时间，以计算深度信息。而激光雷达则通过发射激光束并测量返回时间来获取场景中点的精确三维坐标。激光雷达技术被广泛应用于地图制作和自动驾驶等领域，而时间飞行摄影则在增强现实和计算机视觉领域中发挥重要作用，为场景感知和深度感知提供了有效的解决方案。</p>
+<p>3.融合方法: 结合彩色图像和深度图像的信息，可以用于实时的三维重建，例如Kinect Fusion和Bundle Fusion。使用特征点匹配和图像对齐方法，将多个视角的图像或点云数据融合为一个三维模型。常见的方法包括结构光估计、多视角立体重建等。</p>
+<p>4.深度学习：使用深度学习技术，如卷积神经网络（CNN）和生成对抗网络（GAN），可以用于从图像或点云数据中直接生成三维模型，例如3D点云生成和三维物体重建。</p>
+<p>5.SLAM：同时定位与地图构建是一种用于机器人导航和三维重建的技术。它结合了实时定位和地图创建的过程，通过传感器数据和位姿估计来构建三维环境模型。</p>
+<p>以上列出的方法并不是互斥的，通常在特定应用中会选择合适的组合方法。三维重建技术在自动驾驶、虚拟现实、医学成像、文化遗产保护等领域都有广泛的应用。选择合适的方法取决于应用场景、可用的传感器和所需的精度。</p>
+<h3 id="一-2-3-三维模型几种表现方式"><a href="#一-2-3-三维模型几种表现方式" class="headerlink" title="一.2.3 *三维模型几种表现方式*"></a><strong>一.2.3</strong> <em><strong>*三维模型几种表现方式*</strong></em></h3><p>如图11(a)所示，体素是欧几里德结构的数据。体素是通过将多个立方体规则放置在三维空间中来生成三维物体的表示方式。体素可以存储三维物体形状的几何占有率、体积、密度和符号距离等信息，以便于渲染。值得注意的是与像素相比，体素本身并不包含位置信息可以借助体素之间的相对位置推导出位置信息。</p>
+<p>由于体素表示的规则性，它们与标准卷积神经网络有着配合良好，并且广泛用于深度几何学习。作为先驱3D ShapeNets是首个将体素表示引入到3D场景理解任务中，它提出将三维几何物体表示为体素上二元变量的概率分布。在网络中通过卷积深度置信网络将输入的单视角深度图用三维体素上二元变量的概率分布表示（其实就是通过深度置信网络去判断空间中的一个点是否被三维物体占据，如果被占据则用一个立方体体素表示），深度网络是一种强大的概率模型，通常用于建模二维图像中像素和标签的联合概率分布。接下来，通过预测网络和分类网络对生成的体素模型进行其他视角的建模和分类。</p>
+<p>如图11(b)所示，点云是三维空间中点的无序集合可以将其视为3D形状曲面的离散化样本，因此点云具有无序性、联系性和变换不变性。</p>
+<p>点的无序性意味着点与点之间的顺序不固定，即使两个点交换位置后，仍然表示相同的点云。虽然点云的点是离散的，但是却可以共同组成物体或者环境的轮廓。这也就是说每个点之间既相互独立有紧密联系[1]。变换不变性值得是点云进行刚性变换（旋转平移）后，再进行输入，输出的分类或者是分割结果不变。</p>
+<p>点云信息包括各个点的三维坐标、分类值、颜色信息等等[1]。点云可以由深度传感器直接输出，因此在3D场景理解任务中非常流行。尽管点云很容易获得，但由于其不规则性，使用现有的用于规则网格数据的神经网络进行处理变得更加困难。此外，由于采样变化，底层3D形状可以由许多不同的点云表示。</p>
+<p>如图11(c)所示，多边形网格是非欧几里得数据，表示具有顶点、边和面的集合的形状曲面。与体素相比，网格仅用于对场景曲面进行建模，因此更紧凑且占用更少的内存空间。与点云相比，网格提供了模拟点关系的曲面点的连通性。将3D形状表面参数化为2D几何图像，在使用2D CNN处理几何图像，避免了处理3D拓扑。由于这些优点，多边形网格被广泛应用于传统的计算机图形应用，如几何处理、动画和渲染。然而，将深度神经网络应用于网格比应用于点云更具挑战性，因为除了顶点之外，还需要考虑网格边缘。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps75-1711458934797-3.jpg" alt="img"> </p>
+<p>(a)                  (b)               (c)</p>
+<p>图11 三维模型兔子图几种表现方式</p>
+<h3 id="一-2-4-增强现实显示原理"><a href="#一-2-4-增强现实显示原理" class="headerlink" title="一.2.4 *增强现实显示原理*"></a><strong>一.2.4</strong> <em><strong>*增强现实显示原理*</strong></em></h3><p>增强现实（Augmented Reality，AR）的显示原理涉及将虚拟信息叠加在用户的视野中，以增强或扩展他们的感知。AR可以采用多种方法和技术路线来实现，以下是一些主要的方法和典型的技术路线：</p>
+<ol>
+<li>移动设备AR：这是最常见的AR方法之一，通过智能手机或平板电脑的摄像头和传感器来捕捉用户的环境，然后在设备的屏幕上将虚拟元素叠加在现实世界中。典型代表包括Apple的ARKit和Google的ARCore。</li>
+<li>头戴式AR：头戴式AR设备（如Microsoft的HoloLens和Magic Leap One）是一种独立的AR硬件，用户戴在头上，它们具有内置的显示器、传感器和计算能力，可以将虚拟内容与用户的视野融合在一起。</li>
+<li>投影AR：这种方法使用投影技术将虚拟图像投影到现实世界的表面上。用户可以与投影的虚拟内容进行交互。例如，通过使用投影仪将虚拟键盘投影到桌面上，从而实现虚拟键盘输入。</li>
+<li>混合现实（Mixed Reality，MR）：混合现实是一种将虚拟和现实元素融合在一起的AR方法，可以让虚拟对象与现实世界进行交互，而不仅仅是简单地叠加在上面。这需要高级的感知和交互技术，通常通过头戴式AR设备来实现。</li>
+</ol>
+<p>不同的AR方法和技术路线适用于不同的应用场景和需求。选择合适的方法取决于项目的目标、可用的技术和资源。无论采用哪种方法，AR的核心原理是将虚拟内容与现实世界无缝集成，以提供丰富、交互式的用户体验。</p>
+<h3 id="一-2-5-研究内容"><a href="#一-2-5-研究内容" class="headerlink" title="一.2.5 *研究内容*"></a><strong>一.2.5</strong> <em><strong>*研究内容*</strong></em></h3><p>介绍学位论文的主要内容，具体安排可参照如下：</p>
+<p>第1章为绪论。介绍了本论文的研究背景、研究的目的和意义。</p>
+<p>第2章为三维重建过程中深度空间数据获取和预处理。介绍了几种信息数据的获取方式，数据集的制作和数据噪声分析，针对噪声数据滤波和空洞补全的改进算法。</p>
+<p>第3章为图像数据特征点检测匹配和滤波。详细分析了在三维重建过程中，关键步骤之一的图像特征点检测的常见算法及改进方式。</p>
+<p>第4章介绍了基于深度数据和特征融合的三维重建算法框架和理论基础，在原有三维重建算法的基础上，通过对关键步骤进行改进并且与原算法进行对比分析。</p>
+<p>第5章为基于增强显示的空间感知系统。运用软件和硬件平台的搭建，得到了增强现实感知系统设备，完成了本次系统的搭建。</p>
+<p>第6章为结论与展望。总结本研究的成果，展望研究中的发展方向。</p>
+<h1 id="第二章-空间深度数据获取和预处理"><a href="#第二章-空间深度数据获取和预处理" class="headerlink" title="第二章 *空间深度数据获取和预处理*"></a><strong>第二章</strong> <em><strong>*空间深度数据获取和预处理*</strong></em></h1><h2 id="二-1-几种获取深度信息方式对比"><a href="#二-1-几种获取深度信息方式对比" class="headerlink" title="二.1 *几种获取深度信息方式对比*"></a><strong>二.1</strong> <em><strong>*几种获取深度信息方式对比*</strong></em></h2><h3 id="二-1-1-单目slam重建"><a href="#二-1-1-单目slam重建" class="headerlink" title="二.1.1 *单目slam重建*"></a><strong>二.1.1</strong> <em><strong>*单目slam重建*</strong></em></h3><p>只是用一个摄像头进行单目SLAM的做法成为单目SLAM。</p>
+<p>单目SLAM的原理是在相机移动的过程中，远处的物体移动慢，近处的物体移动的快，根据相机前后帧的移动快慢关系确定物体距离的远近。移动的越快就越近，通过这种移动的快慢，就可以粗略的判断物体的深度[2]。</p>
+<p>如图21所示，在单目SLAM重建中，我们使用单目相机的连续帧的图像的特征点来确定相机的运动位姿，也就是常说的前端里程计，原理与章节4.2相似，使用后端优化得到全局一致的轨迹和地图，在经过回环检测之后，根据估计的轨迹，建立与任务要求对应的地图。经过实际测试，本算法在增强现实空间感知三维重建算法中速度足够，但精度不高，未能满足项目要求，故不在此展开讲解。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps76-1711458934797-4.jpg" alt="img"> </p>
+<p>图21 SLAM常用算法框架图</p>
+<h3 id="二-1-2-双目视觉获取深度"><a href="#二-1-2-双目视觉获取深度" class="headerlink" title="二.1.2 *双目视觉获取深度*"></a><strong>二.1.2</strong> <em><strong>*双目视觉获取深度*</strong></em></h3><p>双目视觉也是模仿人眼进行的深度距离测量，双目相机的两个摄像头好比人类的两个眼睛，它通过左右两个摄像头成像不同从而判断出物体与相机的距离[3]，使用简图表示工作原理如图22所示。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps77-1711458934797-5.jpg" alt="img"> </p>
+<p>图22 双目视觉获取深度原理</p>
+<p>设P点是需要测量的点，OR和OT分别是左右两个摄像头的中心点，P点在左右摄像头上分别进行成像，得到点<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps78-1711458934797-6.png" alt="img">和<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps79-1711458934797-7.png" alt="img">，f是焦距，Baseline是相机中心的距离，设点<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps80-1711458934798-8.png" alt="img">和<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps81-1711458934798-9.png" alt="img">的距离为dis，则有(21)： </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps82-1711458934798-10.png" alt="img"></th>
+<th>(21)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>三角形P<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps83-1711458934798-11.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps84-1711458934798-12.png" alt="img">和POROT相似，有(22)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps85-1711458934798-13.png" alt="img"></th>
+<th>(22)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>P点与相机的距离如公式(23)所示： </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps86-1711458934798-14.png" alt="img"></th>
+<th>(23)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>因此，只要获得了视差d&#x3D;XR−XT，就可以计算出深度Z[4]。双目视觉系统在获取深度信息时比单目视觉系统更为准确，因为它直接利用了视差信息，而不需要依赖于复杂的运动估计或其他先验知识。</p>
+<h3 id="二-1-3-单目深度学习获取深度"><a href="#二-1-3-单目深度学习获取深度" class="headerlink" title="二.1.3 *单目深度学习获取深度*"></a><strong>二.1.3</strong> <em><strong>*单目深度学习获取深度*</strong></em></h3><p>假设我们有一张2d图片<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps87-1711458934798-17.png" alt="img">,我们需要一个函数<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps88-1711458934798-15.png" alt="img">来求取其相对应的深度<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps89-1711458934798-16.png" alt="img">。这个公式可以写为(24)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps90-1711458934798-18.png" alt="img"></th>
+<th>(24)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在单目深度学习的深度预测阶段，如</p>
+<p>图23所示，卷积神经网络（CNN）利用从训练数据中学习到的特征来估计图像中每个像素的深度。卷积神经网络将图像像素进行卷积，消除像素之间的位置差异，将各个像素按照0-255之间的数字进行编码，在编码成一维向量以后就可以放入网络中运算，通过大量的训练集和测试集不断有监督或者无监督的训练深度学习网络，从而得到具有广泛适应性的图像生成网络。随着深度学习网络的不断进化，这种基于神经网络的深度估计方法取得了广泛的关注[5]，估计的深度图像如图24所示。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps91-1711458934798-19.jpg" alt="img"> </p>
+<p>图23 卷积神经网络估计像素深度</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps92-1711458934798-20.jpg" alt="img"> </p>
+<p>图24 深度学习网络实际估测的深度图</p>
+<p>这个过程的核心在于利用深度学习算法的强大能力来从单个图像中提取复杂的深度线索，而无需依赖于传统的立体视觉方法。通过训练，网络能够识别和利用各种深度线索，例如透视、阴影、纹理梯度和已知对象的大小。基于卷积神经网络的深度估计由于不受特定的场景条件的限制，并且具有较好的适用性[5]，但是这类方法有一个缺点就是在训练的过程中，我们需要预先知道大量的输入的图片所对应深度值的参考标准作为训练的约束，从而对神经网络进行反向传播，训练出我们的神经网络用来对于相似的场景进行深度预测。这类方法也就是常说的“监督学习”。但是现实情况下，求取场景所对应的深度值并不是一件容易的事。</p>
+<h3 id="二-1-4-深度相机获取深度"><a href="#二-1-4-深度相机获取深度" class="headerlink" title="二.1.4 *深度相机获取深度*"></a><strong>二.1.4</strong> <em><strong>*深度相机获取深度*</strong></em></h3><p>2010年以后，随着Kinect相机和Kinect Fusion算法的横空出世，打破了世界上原本缺少消费级深度相机局面，随后像RealSense 等厂家也陆续推出了自己的消费级深度相机，在此基础上，众多的基于深度相机的三维重建才变成主流。</p>
+<p>如下图25所示，深度相机的主要原理是可以像激光传感器那样，通过主动向物体发射红外结构光或激光，并接收返回的光，从而测出物体与相机之间的距离。它并不像双目相机那样通过软件计算来解决，而是通过物理的测量手段，所以相比于双目相机可节省大量的计算资源[6]。但是，现在大多数RGB-D相机还存在测量范围窄、噪声大视野小、易受日光干扰、无法测量透射材质等诸多问题，并且相对于激光发射器，其主要用于室内，室外则较难应用[7]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps93-1711458934798-21.jpg" alt="img"> </p>
+<p>图25 TOF相机测量原理</p>
+<p>时间飞行（Time of Flight, ToF）相机的工作原理基于测量光从相机发射到被摄物体反射回来所需的时间[8]。这种技术用于精确计算场景中物体的距离，从而生成深度图。以下是ToF相机的基本工作原理：</p>
+<p>深度相机使用红外LED或激光器发射短脉冲的光。深度相机记录发射这些光脉冲的确切时间t1。发射的光脉冲向外传播，直到它们遇到物体并被反射回来。相机的传感器检测反射回来的光脉冲。记录接收到这些反射光脉冲的时间t2。已知光速V，相机使用距离公式(25)计算发射和接收光脉冲之间的时间差。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps94-1711458934798-22.png" alt="img"></th>
+<th>(25)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>ToF相机可以几乎实时测量整个场景的深度，非常适用于动态环境。总的来说，时间飞行相机是一种高效、直接的方法，用于测量和记录环境的三维信息。故本项目选择使用RGBD相机来作为空间深度数据获取和处理的主要设备。</p>
+<h2 id="二-2-深度-数据获取和-空洞-分析"><a href="#二-2-深度-数据获取和-空洞-分析" class="headerlink" title="二.2 *深度**数据获取和**空洞**分析*"></a><strong>二.2</strong> <em><strong>*深度*</strong></em><em><strong>*数据获取和*</strong></em><em><strong>*空洞*</strong></em><em><strong>*分析*</strong></em></h2><h3 id="二-2-1-RGBD-数据集介绍"><a href="#二-2-1-RGBD-数据集介绍" class="headerlink" title="二.2.1 *RGBD**数据集介绍*"></a><strong>二.2.1</strong> <em><strong>*RGBD*</strong></em><em><strong>*数据集介绍*</strong></em></h3><p>开源项目Bundlefusion提供了一个包含7个大场景（平均轨迹长度60m，平均帧数5833）的RGB-D数据的数据集。它是由<a target="_blank" rel="noopener" href="http://www.structure.io/">Structure.io</a>深度传感器和iPad彩色相机拍摄的。官方提供了三种下载数据格式如图图26所示，分别是zip,ply和.sens数据格式。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps95-1711458934798-25.jpg" alt="img"> </p>
+<p>图26 三种数据集下载格式</p>
+<p>Zip文件夹如下图27所示，以office0为例，它解压后一共18478个项目，包含每一帧三个项目和一个总的相机参数，每一帧包含rgb图片、深度图和相机位姿三个文件，相机参数文件包含版本数字、传感器名字、颜色和深度图长宽、颜色和深度图的畸变参数，由于相机在获取图像的过程中会受到图像畸变的影响，在获取到相机的图片时，需要将图片和畸变参数相乘，得到的才是真实的图像。整个office0流程共有6158帧，rgb文件是24位、JPG文件的格式，作用是记录颜色和纹理贴图，它在重建过程中负责特征点检测和纹理贴图环节输入，它通过特征点检测和匹配算法，判断判断关键帧的相机位移，再通过相机位移，寻找全局关键帧，从而达到最优的重建效果。深度文件是16 位，PNG格式的文件，是记录相机传感器获取的深度值，将他用png形式保存下来，其本质上是数字矩阵，数字越大表示物体离相机越远，单位是毫米，所以它使用png显示呈现黑色，相机位姿是相机坐标到世界坐标的文件，采用四维数组的形式保存在txt文件中，四维数组可以表示相机本身在世界坐标下的旋转平移等运动，作用于后期的深度图融合[9]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps96-1711458934798-23.jpg" alt="img"> </p>
+<p>图27 ZIP文件解压示例</p>
+<p>如下图28所示，RGB-D传感器流（*sens）是一种压缩二进制格式，包含每帧的颜色、深度、相机姿势和其他数据，它是将对齐的每帧的颜色、深度图和相机位姿使用bundlefusion数据处理程序处理后，方便三维重建程序读取的一个流数据格式，它和bag文件相同又存在区别。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps97-1711458934798-24.jpg" alt="img"> </p>
+<p>图28 SENS数据流文件示例</p>
+<p>下载apt0.ply文件格式，使用meshroom打开，高质量重建后的ply文件如下图29所示，它是官方人员使用开源数据集和程序进行的重建最好效果，也是后续文章进行对比实验的可视化对比对象。</p>
+<p><img src="/img/jiazai.png" data-original="file:///C:\Users\peter\AppData\Local\Temp\ksohtml14272\wps98.png" alt="img"> </p>
+<p>图29 PLY文件示例</p>
+<h3 id="二-2-2-数据集制作"><a href="#二-2-2-数据集制作" class="headerlink" title="二.2.2 *数据集制作*"></a><strong>二.2.2</strong> <em><strong>*数据集制作*</strong></em></h3><p>1.录制数据集：使用 USB 线连接好深度相机和电脑，打开 Intel RealSense Viewer，如<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps99-1711458934798-27.jpg" alt="img"></p>
+<p>所示。设置 Depth Stream 以及 Color Stream 的图像分辨率为 640 × 480 ，设置采集帧率为 30 fps 。点击左上角的 Record 按钮即可进行录制，开始录制后，点击左上角的 Stop 按钮即可结束录制并保存录制结果，结束录制后，在相应存储路径下即生成 .bag 文件，按需重命名该文件。至此，完成离线数据集的录制过程。如下图211所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps100-1711458934798-28.jpg" alt="img"> </p>
+<p>图210 <em><strong>*使用*</strong></em><em><strong>*RealSense Viewer录制*</strong></em><em><strong>*bag包*</strong></em></p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps101-1711458934798-29.jpg" alt="img"> </p>
+<p>图211 录制完成示例</p>
+<p>2.解析 .bag文件：使用常见的消费级深度相机获得的bag文件，其中包含颜色、深度和相机位姿的流文件。Bag文件可以保存深度相机运行过程中的所有话题和服务数据，并且录制完成后可以播放出来以供其他系统使用，也可以提取深度图和彩色图并转化成其他格式。.bag 是 ROS 常用的数据存储格式，由于 ROS 的配置在 Ubuntu 18.04系统中，因此切换至 Ubuntu 系统完成 .bag文件的解析并从中提取出深度图和彩色图。首先，进入 bag 文件的存储路径并打开终端，通过 rosbag info mystation.bag 查看待提取的深度图及彩色图所对应的 topic，如下图所示.Intel RealSense D435i 深度相机所录制的数据包括 Depth、RGB 以及 IMU等，使用 BundleFusion 进行<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA&spm=1001.2101.3001.7020">三维重建</a>只需使用 Depth 及 RGB，因此使用python程序只提取此两种类型的数据即可。提取结果如下图212所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps102-1711458934798-30.jpg" alt="img"> </p>
+<p>图212 使用程序对bag文件提取</p>
+<p>由执行结果可知，深度图及彩色图的时间戳并非严格一一对齐，存在一定的时间差，因此需将深度图及彩色图按照时间戳最接近原则进行两两配对。将 associate.py 脚本文件存储至上述两个文本文件所在的路径下，如图所示：在该路径下打开终端并通过执行如下命令生成配对结果 associate.txt。根据配对结果，将深度图及彩色图按对重命名。将相机位姿文件按格式命名并与深度图、彩色图组成序列，执行Python 脚本文件实现上述需求执行结果如下<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps103-1711458934798-31.jpg" alt="img"></p>
+<p>图213所示。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps104-1711458934798-32.jpg" alt="img"> </p>
+<p>图213 深度和彩色信息对齐结果</p>
+<p>3.格式转换：此步骤的目的在于将录制好的数据集转换为BundleFusion所要求的离线输入格式，即.sens格式。BundleFusion提供了将源格式封装成.sens格式的实现。在BundleFusion工程的sensorData.h文件中提供了将源格式封装为.sens格式的相关实现 loadFromImages。将BundleFusion工程中原来的主函数全部注释并替换为如图214所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps105-1711458934799-33.jpg" alt="img"> </p>
+<p>图214 封装sens文件主函数示意</p>
+<p>同时在 sensorData.h 文件的第812与813行对深度图及彩色图的压缩类型进行初始化，从而使代码能够正常运行，生成可用的.sens文件。生成解决方案后，点击 FriedLiver.exe 即可对源格式进行封装，在相应路径下生成.sens文件，至此，成功生成与源格式相同的数据格式。</p>
+<h3 id="二-2-3-数据噪声分析"><a href="#二-2-3-数据噪声分析" class="headerlink" title="二.2.3 *数据噪声分析*"></a><strong>二.2.3</strong> <em><strong>*数据噪声分析*</strong></em></h3><p>本文将深度图的噪声分为四类并分析噪声产生的原因并附说明不同原因造成的噪声。</p>
+<p>1.超出深度相机测量范围：realsenseD435i相机的采集范围为 0.2 米到 4.5 米，未在该范围内的物体均无法获取其深度数据，如图215(b)红色方框为距离相机小于0.2米的物体。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps106-1711458934799-34.jpg" alt="img"> </p>
+<p>​             (a)  彩色图像                (b)  相机可用深度范围外的深度图噪声 </p>
+<p>图215 超出相机测量范围造成的深度孔洞及其彩色图像 </p>
+<p>2.纹理单调处深度值的缺失：由于D435i相机使用双目红外主动测量方式。测量时一方面依赖红外点阵投射器的红外光检测，一方面依赖双目视觉的三角测量法，若获取数据区域表面为光滑无纹理的表面，会产生定位失败，导致深度图像存在孔洞干扰，故在某些平面出现噪声，如图216(b)所示</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps107-1711458934799-35.jpg" alt="img"> </p>
+<p>​          (a)  彩色图像                           (b)  纹理单调处的噪声 </p>
+<p>图216 纹理单调处深度值噪声</p>
+<ol start="3">
+<li>环境光的影响：利用ToF原理获取的深度图，通过向目标物体连续发送光脉冲，再接收从物体返回的光至传感器。依据光脉冲的往返时间估计目标物体与相机间的距离。该方式获取的是整幅图像完整的深度信息，由于受到强光照射等环境光的影响，返回的红外激光阵列受到干扰，室内环境光源附近以及强光直射部分会出现如图217 (b)红色方框中的孔洞噪声，这也再次证明了D435i是主动立体红外成像。</li>
+</ol>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps108-1711458934799-36.jpg" alt="img"> </p>
+<p>​              (a)  彩色图像                      (b)  强烈光源处的噪声 </p>
+<p>图217 环境光导致的深度孔洞及其彩色图像</p>
+<ol start="4">
+<li>物体材质为玻璃或反光面等造成的信息缺失：当目标物体表面为玻璃材质或电脑屏幕等易产生反光的材质时，红外激光脉冲未能完全返回接收器，导致物体表面深度信息丢失，从而造成深度图孔洞。如图218 (b)红色圆框中的孔洞即为电脑屏幕反光造成的。</li>
+</ol>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps109-1711458934799-37.jpg" alt="img"> </p>
+<p>​             (a)  彩色图像                (b)  物体材质导致的深度图噪声 </p>
+<p>图218 表面为反光或玻璃材质导致的深度孔洞及其彩色图像</p>
+<h2 id="二-3-深度数据滤波"><a href="#二-3-深度数据滤波" class="headerlink" title="二.3 *深度数据滤波*"></a><strong>二.3</strong> <em><strong>*深度数据滤波*</strong></em></h2><h3 id="二-3-1-自适应中值滤波"><a href="#二-3-1-自适应中值滤波" class="headerlink" title="二.3.1 *自适应中值滤波*"></a><strong>二.3.1</strong> <em><strong>*自适应中值滤波*</strong></em></h3><p>自适应中值滤波源于中值滤波。中值滤波通过移动矩形模板遍历图像的各个像素点，将板内<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/575.htm">像素</a>按照像素值的大小进行排序，生成单调上升（或下降）的为二维数据序列，并用模板像素值排序后的中值代替图像中心点像素值。中值滤波定义如公式(26)所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps110-1711458934799-38.png" alt="img"></th>
+<th>(26)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>由原理可知，中值滤波使用滤波窗口进行消除噪声，也就是说使用滤波的窗口越大，消除噪声效果越好，但是图像细节确实越多，反之图像细节缺失越少，这种滤波方式不同的滤波窗口大小对滤波有着不一样的效果。那么，有没有一种方式可以根据当前图像的位置的噪声大小自适应的改变滤波窗口的大小呢[9]？</p>
+<p>自适应中值滤波是一种用于图像处理和图像恢复的非线性滤波方法。它的主要目标是去除图像中的噪声，同时保留图像中的边缘和细节。自适应中值滤波与传统中值滤波不同，它能够根据图像局部区域的特性动态调整滤波器的大小。它的主要思想是根据局部像素值的分布情况来调整滤波器的大小，以适应不同程度的噪声。</p>
+<p>自适应中值滤波流程如图219所示，假设Zx,y为点(x,y)的灰度值，Sij为窗口，Zmax，Zmed和Zmin为 S框定像素点中的最大、中值和最小灰度值，Smax为模板最大阈值。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps111-1711458934799-39.jpg" alt="img"> </p>
+<p>图219 自适应中值滤波流程图</p>
+<p>假设条件一：Zmed- Zmin &gt;0且 Zmed - Zmax &lt;0，条件二为：Zxy - Zmin 0 且 Zxy- Zmax &lt;0。若当前模板Zx,y满足条件一和二，则输出Zx,y，若满足条件一，不满足条件二，则输出Zmed。若不满足条件一，则增大模板Sij。若模板满不足Sij&lt;Smax，则输出Zx,y，满足则重新判断与条件一和二的关系，循环上述过程直至遍历完成。</p>
+<h3 id="二-3-2-高斯滤波"><a href="#二-3-2-高斯滤波" class="headerlink" title="二.3.2 *高斯滤波*"></a><strong>二.3.2</strong> <em><strong>*高斯滤波*</strong></em></h3><p>高斯滤波是一种利用高斯函数形状选择权值的低通滤波方式，它利用二维卷积高斯算子平滑深度图，将深度图的细节和噪声滤除后图像变得模糊，但去除了噪声却也丢失了图像细节。</p>
+<p>高斯滤波的重要两步就是先找到高斯核，然后再进行卷积，其核的形式如公式(27)所示。其中(x,y)是图像中的点的坐标， <img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps112-1711458934799-40.png" alt="img">为标准差，高斯模板就是利用这个函数来计算的，x和y都是代表以核中心点为坐标原点的坐标值。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps113-1711458934799-41.png" alt="img"></th>
+<th>(27)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>如图220所示，假定σ&#x3D;1.5，图像中心点的坐标是（0,0），半径为1的高斯模板就是取距离它最近的8个点坐标，分别计算后就得出了高斯模糊后的图像[10]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps114-1711458934799-42.jpg" alt="img"> </p>
+<p>图220 半径为1的高斯模板计算过程</p>
+<p>这个时候我们我们还要确保这九个点加起来为1，这9个点的权重总和等于0.4787147，因此上面9个值还要分别除以权重总和，得到最终的高斯模板如图221所示[11]：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps115-1711458934799-43.jpg" alt="img"> </p>
+<p>图221 最终得到的高斯模板</p>
+<p>有了高斯模板，就可以利用高斯模板对图像进行卷积，将模板作为权值，与对应像素相乘再求和，得到的结果就是中心点卷积后的结果，本质上是个加权平均操作。对图像中的所有点重复这个操作，就得到了高斯模糊后的图像[12]。</p>
+<h3 id="二-3-3-双边滤波"><a href="#二-3-3-双边滤波" class="headerlink" title="二.3.3 *双边滤波*"></a><strong>二.3.3</strong> <em><strong>*双边滤波*</strong></em></h3><p>双边滤波是一种结合图像的空间临近度和像素值相似度的一种非线性滤波方法。它同时考虑了像素之间的空间差异和强度差异，在空间距离近的像素和强度高的像素给与更大的权重，再对像素点进行加权平均操作。这样的加权平均方式本质上也是一种动态模糊方式[13]。</p>
+<p>如公式(28)所示，其中中心点像素值为���(���, ���)、邻域内像素值f（i,j）、权重系数为���(x,y, i, j)、������为几何空间距离基于高斯函数的标准差、������为像素差值基于高斯函数的标准差。中心点更新后���(���, ���)像素值g(x,y)依赖于与其权重w(I,j)的加权组合：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps116-1711458934799-44.png" alt="img"></th>
+<th>(28)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>权重系数���(x,y, i, j)为公式(29)所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps117-1711458934799-45.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps118-1711458934799-46.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps119-1711458934799-47.png" alt="img"></th>
+<th>(29)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="二-4-改进的深度数据滤波和空洞补全算法"><a href="#二-4-改进的深度数据滤波和空洞补全算法" class="headerlink" title="二.4 *改进的深度数据滤波和空洞补全算法*"></a><strong>二.4</strong> <em><strong>*改进的深度数据滤波和空洞补全算法*</strong></em></h2><p>在章节2.2.3章节我们详细分析了使用消费级深度相机采集深度图像可能产生的噪声和空洞，这是由相机本身精度不足或者特定情景产生的，这样的噪声和空洞会极大程度的影响重建的表面精度。想要提高三维重建的精度，对输入的深度数据进行处理必不可少，最好是可以将深度图的空洞进行算法补全，对相机产生的噪声进行滤波[14]。在相机的深度图输出过程中，深度输出的是16比特的毫米数字，他表示相机与真实物体表面的距离，使用二维矩阵表示中，他们是具有规律的表面起伏，所以我们可以使用物体表面的规律属性，对噪声和空洞进行滤波和补全。</p>
+<p>在常见的数据滤波算法中，自适应中值滤波、高斯滤波、双边滤波可以对噪声数据进行过滤和清洗，这对于提高图像清晰度，减少图像噪声有着显著的作用。但是它们普遍是对图像整体进行清洗，在一些空洞部分，会存在两种情况，第一种是在物体与背景深度图之间，会产生突然的深度差值，如下图所示，这样的差值是由于相机采集的精度不足产生的，这样的噪声表现为边缘曲线不平滑，这样的噪声我们可以使用轮廓增强算法弥补。第二种是数据在连续变化的过程中出现空值，如图所示，在连续平面中，数值为100的数值之间，突然出现数值为0的多个连续空值，这样的情况我们需要使用空洞补全算法进行修补。综上所述，本算法设计了一个深度图像的滤波和补全增强算法，通过深度图中孔洞邻域的有效深度值的插值补全，合理桥接空洞两侧深度值，它可以让深度图像更加平滑，重建效果更好，本算法框架如图222所示</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps120-1711458934799-48.jpg" alt="img"> </p>
+<p>图222 深度数据补全算法框架</p>
+<p>首先，只有在对图像进行去除噪声以后，再对深度图像进行孔洞补全。由于空洞补全算法需要参考空洞附近的深度值，如果不对深度图像进行滤波，空洞补全效果会受附近噪声影响。在每一帧的深度图像输入以后，使用滤波对输入的深度图像进行中值滤波，过滤掉图像噪声以后再进行深度补全。噪声滤波算法选择经实验观察得出，使用自适应中值滤波算法对深度图像滤波效果最好，可以最大程度的保留深度图像的边界特征，实验见下一章节所示。</p>
+<p>第二步，对深度图像进行孔洞补全。使用opencv将图像数据保存为数组格式，输入的数组大小为480x640，使用两层循环进行遍历数组。一般情况下，数组中的值不会存在0值，如果检测到零值，也就意味着出现了噪声或者空洞。深度补全算法根据孔洞在深度图中出现的位置可以分为以下几类，按照出现次数多少进行排序：</p>
+<p>1.如图223所示，设存在连续空洞值像素点P，n个连续空值点P使用P0…Pn来表示，左侧存在深度值像素点L且右侧存在深度值像素点R，孔洞位置两侧皆有真实深度值以供参考。本补全算法考虑到实际空洞都连续产生，有可能大有可能小，故若发现空洞像素值P，若左侧有可参考深度值L，会向右搜索可参考深度值R，一旦存在可参考深度值R，则每一个点Pi使用深度值公式(210)计算。本公式为了保证空洞可以合理保存空洞左右两侧深度，若空洞两侧不存在深度差，则L-R等于0，空洞深度等于左侧深度，若空洞左右存在深度差，则空洞按照差值产生一定梯度，将左右两侧深度值使用梯度连接在一起。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps121-1711458934799-49.jpg" alt="img"> </p>
+<p>图223 空洞左右都存在有效深度示意图</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps122-1711458934799-50.png" alt="img"></th>
+<th>(210)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2.如图224所示，设存在连续空洞值像素点P，n个连续空值点P使用P0…Pn来表示，左侧不存在深度值像素点L且右侧存在深度值像素点R，孔洞位置右侧有真实深度值以供参考。本补全算法考虑到实际空洞都连续产生，有可能大有可能小，故若发现空洞像素值P，若左侧没有可参考深度值L，会向右搜索可参考深度值R，一旦存在可参考深度值R，则每一个点Pi使用深度值公式计算。本公式(211)为了保证空洞可以合理保存空洞右侧深度，考虑实际情况大多是存在玻璃边界，故使用深度值不缺失的一侧代替深度缺失的空洞值。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps123-1711458934799-51.jpg" alt="img"> </p>
+<p>图224 空洞只有右侧存在有效深度</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps124-1711458934799-52.png" alt="img"></th>
+<th>(211)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>3.如图225所示，设存在连续空洞值像素点P，n个连续空值点P使用P0…Pn来表示，右侧不存在深度值像素点R且左侧存在深度值像素点L，孔洞位置左侧有真实深度值以供参考。本补全算法考虑到实际空洞都连续产生，有可能大有可能小，故若发现空洞像素值P，若右侧没有可参考深度值R，会向左搜索可参考深度值L，一旦存在可参考深度值L，则每一个点Pi使用深度值公式计算。本公式(212)为了保证空洞可以合理保存空洞左侧深度，考虑实际情况大多是存在玻璃边界，故使用深度值不缺失的一侧代替深度缺失的空洞值。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps125-1711458934799-53.jpg" alt="img"> </p>
+<p>图225 空洞只有左侧存在有效深度</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps126-1711458934800-54.png" alt="img"></th>
+<th>(212)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>将深度图依照行列逐点遍历，孔洞补全伪代码如附录所示。</p>
+<h2 id="二-5-深度图滤波与补全实验"><a href="#二-5-深度图滤波与补全实验" class="headerlink" title="二.5 *深度图滤波与补全实验*"></a><strong>二.5</strong> <em><strong>*深度图滤波与补全实验*</strong></em></h2><p>​	本文使用深度相机用于采集深度信息，采集到的深度图像如图所示，深度图像存在噪声和空洞，使用程序将空洞用红色表示如图226(c)所示，有2.2.3章节对噪声进行分析，采用自适应中值滤波、高斯滤波、双边滤波算法对原始深度图展开滤波实验，可视化结果如图226所示，并进行了实验分析。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps127-1711458934800-55.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps128-1711458934800-56.jpg" alt="img"> </p>
+<p>​           (a) 原始图像彩色图              (b) 原始图像深度图</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps129-1711458934800-57.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps130-1711458934800-58.jpg" alt="img"> </p>
+<p>​          (c) 原始深度显示空洞             (d)自适应中值滤波深度图</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps131-1711458934800-59.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps132-1711458934800-60.jpg" alt="img"> </p>
+<p>​         (e) 高斯滤波深度图双                 (f) 双边滤波深度图</p>
+<p>图226 原始图像与高斯滤波、双边滤波、自适应中值滤波对比效果</p>
+<p>自适应中值滤波结果如图226(d)所示，该方法相对于原深度图的黑色点a的数量显著的降低，在图像b处交界线附近的空值也进行了平滑，自适应中值滤波算法运行时间0.01069秒，但也存在大面积的空洞值无法通过滤波进行去除。</p>
+<p>高斯滤波的结果如图226(e)所示，该方法相对于原深度图的黑色点a的数量有部分降低，在图像b处交界线附近曲线处也有进行平滑，高斯滤波算法滤波效果保留了原图大部分的特征，对深度图整体产生了模糊的感觉，高斯滤波的算法运行时间0.00069秒，但是存在的大量空洞值和特征细节，关键的图像交界线b处平滑效果并不好。</p>
+<p>双边滤波的实验结果如图226(f)，该方法相对于原图像的黑色点a数量有少量的降低，在边缘部分b的曲线部分也有不明显平滑，整体细节不如高斯滤波，算法运行时间0.00216秒，但是存在大量的空洞值，且整体观感模糊。</p>
+<p>综上所示，本文选择使用自适应中值滤波作为空洞补全算法的前置算法，可以大大减少补全算法运算时间，提升深度图像整体平滑度。</p>
+<p>挑选具有特点的深度图像关键帧进行对比实验，空洞补全算法对比结果如下所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps133-1711458934800-61.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps134-1711458934800-62.jpg" alt="img"> </p>
+<p>​      (a) 原始深度图        (b) 补全后深度图</p>
+<p>图227 屏幕介质空洞补全</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps135-1711458934800-63.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps136-1711458934800-64.jpg" alt="img"> </p>
+<p>​      (a) 原始深度图        (b) 补全后深度图</p>
+<p>图228 物体边缘空洞补全</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps137-1711458934800-65.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps138-1711458934800-66.jpg" alt="img"> </p>
+<p>​      (a) 原始深度图        (b) 补全后深度图</p>
+<p>图229 特征缺失处空洞补全</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps139-1711458934800-67.jpg" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps140-1711458934800-68.jpg" alt="img"> </p>
+<p>​      (a) 原始深度图        (b) 补全后深度图</p>
+<p>图230 物体粗糙边缘深度补全</p>
+<p>本文中使用的空洞补全算法对深度图的大面积空洞都可以很好的补全，并且较好的保护了图像的边缘信息和深度信息，对于图227出现的玻璃屏幕介质导致的空洞也能很好的补全，大面积的深度空洞出现了拟合。对如图228出现的深度图边缘空洞补全效果很好。对于图229的远处的缺失特征点处的平面深度信息也有很好的补全效果，对于图230物体轮廓深度的深度空洞也有较好的补全。</p>
+<p>统计室内深度图补全算法运行时间，平均每10帧补全时间为0.7秒。通过三维重建实验，本方法时间复杂度较低，补全精准度高，可以达到对三维重建表面提升精度的效果。</p>
+<p>定量分析补全的深度图，计算原深度图与本文补全深度图的均方根误差 RMSE 与结构性相似指数SSIM 值，其中，SSIM 指标可考察补全前后深度图的亮度、对比度以及结构相似性。RMSE 表示预测值ŷi的回归效果与真实值yi的平均误差，定义如公式(213)所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps141-1711458934800-69.png" alt="img"></th>
+<th>(213)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>SSIM 是一种评价两幅图像间结构相似性的指标，可综合评估图像间的亮度l(x, y)、结构相似度s(x, y)及对比度c(x, y)。其中μx 、μy为 x、y 的均值，σx<strong>、</strong>σy为 x、y 的标准差，σxy为 x 和 y 的协方差，C1、C2为常数，���<strong>、</strong>���<strong>、</strong>���代表不同特征在 SSIM 中的占比。SSIM 的值越大，表示两幅图的相似性越高，SSIM 的定义如公式(214)所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps142-1711458934800-70.png" alt="img"></th>
+<th>(214)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>其中：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps143-1711458934800-71.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps144-1711458934800-72.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps145-1711458934800-73.png" alt="img"></th>
+<th>(215)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>如表21所示，补全采集的九张深度图并量化评价补全结果。结果证明，补全后的深度图均方根误差众数处于0.2，SSIM数据众数处于8，说明补全误差较小，且保持了物体原有的亮度和结构。图231所示为补补全前后的相似度与误差折线图。</p>
+<p>表21 孔洞补全深度图与原深度图误差及相似度对比表</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RMSE</td>
+<td>0.259</td>
+<td>0.351</td>
+<td>0.338</td>
+<td>0.221</td>
+<td>0.323</td>
+<td>0.224</td>
+<td>0.455</td>
+<td>0.511</td>
+<td>0.488</td>
+</tr>
+<tr>
+<td>SSIM</td>
+<td>0.795</td>
+<td>0.812</td>
+<td>0.856</td>
+<td>0.841</td>
+<td>0.723</td>
+<td>0.821</td>
+<td>0.855</td>
+<td>0.799</td>
+<td>0.853</td>
+</tr>
+</tbody></table>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps146-1711458934800-74.jpg" alt="img"> </p>
+<p>图231深度补全的 RMSE 和 SSIM 折线图 </p>
+<h2 id="二-6-本章总结"><a href="#二-6-本章总结" class="headerlink" title="二.6 *本章总结*"></a><strong>二.6</strong> <em><strong>*本章总结*</strong></em></h2><p>本章首先介绍了几种主流空间中获取物体深度信息的方式，包括单目SLAM、双目视觉获取深度、单目深度学习获取深度和深度相机获取深度，介绍了它们的原理以及在实际应用中的情景和对优缺点进行了分析，根据本项目实际情况选择最适合本项目的深度相机获取方式。第二部分介绍了本项目使用的开源数据集的内容和特点，根据相关资料，录制出本项目的离线数据集，并且根据官方数据集中数据存在的噪声进行实验分析，提出去除噪声的方案。第三提出一种使用滤波及插值算法的空洞补全算法，经过可视化和量化实验进行分析后，我们认为本算法在去除深度数据噪声、提升深度数据平滑度和填补大面积空洞方面具有显著的优势。</p>
+<h1 id="第三章-图像数据特征点检测匹配和滤波"><a href="#第三章-图像数据特征点检测匹配和滤波" class="headerlink" title="第三章 *图像数据特征点检测匹配和滤波*"></a><strong>第三章</strong> <em><strong>*图像数据特征点检测匹配和滤波*</strong></em></h1><h2 id="三-1-特征点检测"><a href="#三-1-特征点检测" class="headerlink" title="三.1 *特征点检测*"></a><strong>三.1</strong> <em><strong>*特征点检测*</strong></em></h2><h3 id="三-1-1-ORB-算法"><a href="#三-1-1-ORB-算法" class="headerlink" title="三.1.1 *ORB**算法*"></a><strong>三.1.1</strong> <em><strong>*ORB*</strong></em><em><strong>*算法*</strong></em></h3><p>ORB英文全称是Oriented FAST and Rotated BRIEF，是一种快速的特征点提取和描述的算法。ORB算法将FAST特征点检测方法与BRIEF特征描述子结合起来[14]，关键点的检测使用Oriented FAST算法，使用Rotated BRIEF对提取的特征点进行描述，增加特征描述子的旋转不变特性。</p>
+<p>Oriented FAST算法的主要思想是一个像素周围如果有足够多像素与其值差异较大，则该点很可能是一个角点，基本步骤是：</p>
+<p>1.粗提取特征点，从图像选取一点P，如图31所示，以像素点P为圆心画一个半径为3pixel的圆，如果在这个圆的圆周上有连续n个像素灰度值都大于或小于P点的灰度值，就将P点标记为一个特征点。为了加快检测的速度，快速排除非特征点，在算法开始之前先检测1，5，9，13的灰度值是否都比P点大或者小，若不满足上述条件，就直接排除[15]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps147-1711458934800-75.jpg" alt="img"> </p>
+<p>图31 FAST特征点检测与Brief描述子的构成</p>
+<p>2.根据以上原理，然后再次对周围像素点与中心点P的灰度差进行判断，如果超过阈值的个数超过12个，则认定点P为特征点。</p>
+<ol start="3">
+<li>由于FAST算法可能在图像的特征区域产生大量密集的特征点，我们可以通过保留每个区域中得分最高的一个特征点来减少数据量，从而提高后续算法的效率。这一过程可以通过非最大值抑制与计算Harris响应来完成。对特征点进行非极大值抑制，就是对点p的邻域内的3x3或者5x5的邻域进行所有特征点进行特征点FAST得分值排序，保留得分值最大的特征点。得分计算公式(31)如下（公式中用N表示得分，<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps148-1711458934800-76.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps149-1711458934800-77.jpg" alt="img">为相差阈值）。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps150-1711458934800-78.png" alt="img"></th>
+<th>(31)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>由上述过程得到的特征点需要对特征点进行描述才可以匹配，ORB采用Rotated BRIEF对特征点进行编码，基本流程如下，</p>
+<p>1在每个点p的邻域内选取m个像素点对设置为a1,a2……am，b1b2……bm。</p>
+<p>2定义K：比较Ai,Bi的灰度值，若灰度值ai&gt;bi,则生成二进制数1，否则生成0，如公式(32)(33)所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps151-1711458934800-79.png" alt="img"></th>
+<th>(32)</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps152-1711458934800-80.png" alt="img"></td>
+<td>(33)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>4.遍历所有特征点并且比较，生成二进制串作为描述子。通过Brief算法生成的描述子可以使用汉明距离来判断两个描述子之间的匹配程度。</p>
+<h3 id="三-1-2-SIFT-算法"><a href="#三-1-2-SIFT-算法" class="headerlink" title="三.1.2 *SIFT**算法*"></a><strong>三.1.2</strong> <em><strong>*SIFT*</strong></em><em><strong>*算法*</strong></em></h3><p>SIFT的全称是Scale Invariant Feature Transform，中文名字是尺度不变特征变换[16]。使用SIFT算法得到的特征点具有对旋转、尺度缩放、亮度变化保持不变的特征，故称为尺度不变特征变换[17]。SIFT算法的具体步骤如下：</p>
+<p>1.构建高斯尺度空间：使用高斯卷积函数对图像进行模糊，使用不同大小的卷积核对图像进行不同程度的模糊，这样的模糊组合称为高斯尺度空间，这样尺度空间内的图像具有尺度不变的特性[18]，高斯尺度空间如公式(34)所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps153-1711458934800-81.png" alt="img">是尺度空间因子，它在公式中决定了图象被模糊的程度，L(x,y,σ)称为图像的高斯尺度空间。若I（x,y）为图像，在尺度<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps154-1711458934800-82.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps155-1711458934800-83.jpg" alt="img"> 的条件下，由原始影像I（x,y）与高斯模糊G(x,y,<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps156-1711458934800-84.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps157-1711458934800-85.jpg" alt="img">)进行卷积，：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps158-1711458934800-86.png" alt="img"></th>
+<th>(34)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>其中G(x,y,<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps159-1711458934800-87.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps160-1711458934800-88.jpg" alt="img">)是高斯核函数(35)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps161-1711458934800-89.png" alt="img"></th>
+<th>(35)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>构建尺度空间的目的是为了检测出在不同的尺度下都存在的特征点，而检测特征点较好的算子是<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps162-1711458934800-90.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps163-1711458934801-91.jpg" alt="img"> (高斯拉普拉斯,LoG）：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps164-1711458934801-92.png" alt="img"></th>
+<th>(36)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>LOG可以较好的检测图像中的特征点，但是运算量过大，所以一般是用高斯差分来近似计算[19]。设K为相邻两个高斯尺度空间的比例因子，则高斯差分（DoG）定义为(37)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps165-1711458934801-93.png" alt="img"></th>
+<th>(37)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>其中：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps166-1711458934801-94.png" alt="img"></th>
+<th>(38)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>使用LoG算子可在不同尺度下检测图像特征，DoG与LoG算子之间存在如下关系(39)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps167-1711458934801-95.png" alt="img"></th>
+<th>(39)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>采用二阶导数表示不同平滑尺度与的高斯函数差值的尺度归一化公式如下(310)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps168-1711458934801-96.png" alt="img"></th>
+<th>(310)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>从上式可知，高斯差分金字塔（DoG）的相应图像可以由两个相邻的高斯空间图像相减得到，所以将高斯金字塔相邻图像相减就可以得到DoG金字塔。高斯金字塔的生成过程如图32[20]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps169-1711458934801-97.jpg" alt="img"> </p>
+<p>图32 高斯金字塔与高斯差分金字塔的生成示意图</p>
+<p>2.特征点描述：经过高斯金字塔的图片模糊，保证了特征点的尺度不变性，接下来保证旋转不变性。利用特征点邻域像素的梯度分布来确定方向参数，再利用图像的梯度直方图求取关键点周围的稳定方向结构。通过下面公式(311)(312)计算以特征点（x,y）为中心、以3×1.5σ为半径的区域图像的幅角和幅值，每个点L(x,y)的梯度的模m(x,y)以及方向θ(x,y)如下所示[21]：</p>
+<table>
+<thead>
+<tr>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps170-1711458934801-98.png" alt="img"></th>
+<th>(311)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps171-1711458934801-99.png" alt="img"></td>
+<td>(312)</td>
+</tr>
+</tbody></table>
+<p>计算得到梯度方向后，就要使用直方图统计特征点邻域内像素对应的梯度方向和幅值[26]。依据关键点高斯图像梯度统计的结果表达SIFT描述子，将关键点邻域块处理计算梯度分布直方图，对特征向量归一化处理，最终得到128维描述子向量<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps172-1711458934801-100.png" alt="img">和128维归一化描述子向量<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps173-1711458934801-101.png" alt="img">。</p>
+<h3 id="三-1-3-SURF-算法"><a href="#三-1-3-SURF-算法" class="headerlink" title="三.1.3 *SURF**算法*"></a><strong>三.1.3</strong> <em><strong>*SURF*</strong></em><em><strong>*算法*</strong></em></h3><p>SURF算法是对SIFT算法的一种改进，运行速度相较于SIFT有较大提升[27]。改进方面有：1.SURF 算法将SIFT中的高斯差分金字塔和局部极值利用Hessian矩阵替代，使用盒式滤波的方式求解高斯模糊的近似值；2.SURF算法去除降采样部分，图像尺度不变，通过改变盒式滤波器的大小构建尺度金字塔；3.计算关键点的向量方向时改用Haar小波变换，使得SURF算法降至64维。SURF 算法的步骤如下：</p>
+<p>1.积分图与Hessian矩阵的构建：如图33所示，设图像中的存在灰度区域 Σ ，I(i,j)表示点(i,j)处的灰度值，<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps174-1711458934801-102.png" alt="img">是点左上角到右下角对角线区域灰度值的和。可知计算图像内任何矩形区域的像素值的和，只需要基本的加减运算[22]。获得积分图主要是为了方便计算某一个区域的像素和。Hessian矩阵的构建如公式(313)所示，计算 Σ 区域内的像素和只需要计算三次加减法。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps175-1711458934801-103.png" alt="img"></th>
+<th>(313)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps176-1711458934801-104.jpg" alt="img"> </p>
+<p>图33 图像积分图表示</p>
+<p>SURF算法利用Hessian矩阵构造像素金字塔，Hessian矩阵可以生成稳定的边缘点，依据 Hessian 矩阵的模长选取局部极大值，模取局部极大值的点作为特征点[28]。像素点f(x, y)的Hessian矩阵与它的模长可表示为公式(314)。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps177-1711458934801-105.png" alt="img"></th>
+<th>(314)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>然而实际计算时，我们并不会真的用<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps178-1711458934801-106.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps179-1711458934801-107.jpg" alt="img">和图像卷积，而是使用盒式滤波器近似。下图34展示了盒式滤波器对<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps180-1711458934801-108.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps181-1711458934801-109.jpg" alt="img">和<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps182-1711458934801-110.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps183-1711458934801-111.jpg" alt="img">的近似情况。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps184-1711458934801-112.jpg" alt="img"> </p>
+<p>(a) 滤波器模板的增大    (b) 盒式滤波器模板的增大</p>
+<p>图34 滤波器模板增大示意图</p>
+<p>使用盒式滤波器卷积时，可以查找积分图中的元素来加快计算。每个像素的Hessian矩阵行列式的近似值如公式(315)所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps185-1711458934801-113.png" alt="img"></th>
+<th>(315)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>利用二阶高斯函数与原始图的乘积构造的Hessian矩阵可使得图像具有尺度无关的特性，且可以将复杂的滤波过程转换为区域像素点的四则运算，大大降低了计算复杂度，下式的是由盒式滤波所产生的误差，Dxx和Dyy分别为 x、y 的二阶导数。</p>
+<p>2.特征点定位与方向确定：Sift特征点方向分配是采用在特征点邻域内统计其梯度直方图，而在Surf中，采用的是统计特征点圆形邻域内的haar小波特征[29]。如图35(b)所示，其具体方法是首先在特征点位置画一个直径为6s的圆形，s为尺度。分别计算这个圆中的每个以s*s为间隔取样的点处的haarX和haarY特征，同时使用公式(316)计算每个点的特征方向<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps186-1711458934801-114.png" alt="img">，在一个60度的扇形中统计落在扇形角度范围内的点的harrX和HarrY各自之和sumX和sumY，该扇形以每次15度的精度绕中心旋转，选取使得sum的模长最大的扇形方向为该特征点的方向。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps187-1711458934802-115.png" alt="img"></th>
+<th>(316)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>3.描述子的构建与特征匹配：接下来进行特征子的描述计算，如图35(b)所示，首先根据方向信息，以特征点的位置为中心转动20s*20s的方框和主方向重合，s为尺度。邻域选取4×4的矩形框，将其划分为16个等大的矩形，因此对于16个区域总共能够得到64维的向量，对每一个区域的特征和高斯模板卷积，最后进行归一化处理以获得光照不变性。每个矩形包含25个响应值，再统计响应值生成特征矢量∑ dx、∑ |dx|、∑ dy、 ∑ |dy|，将模长最大的矢量方向作为主方向。若两点之间的欧式距离小于阈值，则认为特征匹配成功；若Hessian矩阵的迹的符号相同则证明特征点间的方向相同，则匹配成功。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps188-1711458934802-116.jpg" alt="img"> </p>
+<p>(a) 统计 Harr 小波响应值图         (b) 描述子的方向构建 </p>
+<p>图35 统计响应值与描述子的构建示意图 </p>
+<h2 id="三-2-特征匹配过滤"><a href="#三-2-特征匹配过滤" class="headerlink" title="三.2 *特征匹配过滤*"></a><strong>三.2</strong> <em><strong>*特征匹配过滤*</strong></em></h2><h3 id="三-2-1-常见特征匹配"><a href="#三-2-1-常见特征匹配" class="headerlink" title="三.2.1 *常见特征匹配*"></a><strong>三.2.1</strong> <em><strong>*常见特征匹配*</strong></em></h3><p>暴力匹配方法(Brute-Froce Matcher)：对于第一幅图像中的每个特征点，计算其特征描述子，遍历第二幅图像的每个特征点的描述子，找到描述子相差最小的特征点，时间复杂度是O（n2）。</p>
+<p>汉明距离匹配：对特征点的描述子使用二进制进行编码，然后规定一个阈值，遍历第一幅图像的所有特征点，找到编码差距的小于规定阈值的点，就视为匹配特征点。这样的好处是比暴力匹配速度要快。</p>
+<p>交叉匹配：设第一幅图像的的特征点为A，第二幅为B，交叉匹配就是将A用暴力匹配的方法进行匹配到的特征点B，再运行一次匹配方法，若B匹配得到的结果仍是第一幅的A，就视为匹配通过，这样比暴力匹配准确度更高。</p>
+<p>KNN匹配：需要将图像的描述子进行编码，在进行最近邻匹配的时候，选择K个编码相似的特征点，对K个特征点进行排序，如果第一个和第二个特征点的编码差距大于规定的阈值，则认为第一个特征点是匹配特征点。</p>
+<h3 id="三-2-2-随机采样一致性匹配"><a href="#三-2-2-随机采样一致性匹配" class="headerlink" title="三.2.2 *随机采样一致性匹配*"></a><strong>三.2.2</strong> <em><strong>*随机采样一致性匹配*</strong></em></h3><p>随机采样一致性（Random Sample Consensus，简称RANSAC）匹配是一种用于估计模型参数并剔除离群点的鲁棒估计方法。它常用于计算机视觉和计算机图形学中，用于解决诸如特征匹配、模型拟合、相机位姿估计等问题。该方法利用随机的匹配点计算两个图像之间变换矩阵，然后判断图像中满足矩阵的点的数量，目的是使找到满足特征点最多的变化矩阵。以下是RANSAC匹配的基本原理和步骤：</p>
+<p>(1)从待匹配点中随机抽取4个匹配点对</p>
+<p>(2)根据这4个匹配点对计算出变换矩阵M</p>
+<p>(3)根据特征点和变化矩阵M计算出满足当前变化矩阵的所有点对C,并返回点对的个数</p>
+<p>(4)根据返回的个数判断是不是最多的个数，数最多的个数则更新最优点集。</p>
+<p>(5)更新点对匹配和不匹配的概率，如果不满足要求就重复(1)至(4)继续迭代，直到当前错误概率p小于最小错误概率[30]。</p>
+<p>RANSAC匹配是一种鲁棒的估计方法，对于包含离群点的数据非常有效，能够提高模型估计的稳定性和准确性。</p>
+<h2 id="三-3-改进的特征点检测和匹配算法"><a href="#三-3-改进的特征点检测和匹配算法" class="headerlink" title="三.3 *改进的特征点检测和匹配算法*"></a><strong>三.3</strong> <em><strong>*改进的特征点检测和匹配算法*</strong></em></h2><p>在实时三维重建框架中，相机位姿相对于世界坐标的求解是相当重要的一步，本三维重建算法框架使用Bundlefusion三维重建框架，使用局部优化和全局优化保证筛选的关键帧是最符合世界坐标的视频帧，本框架使用特征点法检测关键点，使用关键点匹配获得关键帧之间的平移旋转矩阵，在得到运动矩阵以后将深度图像进行融合并对贴图融合。在原算法中使用sift算法进行特征点检测，使用汉明距离进行特征匹配，故本文提出改进的特征点检测和匹配算法，达到更好的重建效果。</p>
+<p>改进的算法是SIFT特征算法的一种改进版本，不使用高斯模糊来构建尺度空间，进而采用非线性扩散滤波来构建尺度空间，从而保留图像更多的边缘特征。</p>
+<p>本文采用的非线性滤波算法是将图像灰度值（L）在不同尺度上的变化描述成某种形式的传导函数和散度，通过设置合适的传导函数c(x,y,t)，可以使得扩散自适应于图像的局部结构。如公式(317)所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps189-1711458934802-117.png" alt="img"></th>
+<th>(317)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>传导函数由Perona和Malik提出，传导函数的构造方式如(318)(319)所示[31]：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps190-1711458934802-118.png" alt="img"></th>
+<th>(318)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps191-1711458934802-119.png" alt="img"></td>
+<td>(319)</td>
+</tr>
+</tbody></table>
+<p>由(317)中所示的非线性微分方程可知，随着时间t的推移，图像L(x,y,t)也在进行变化，由此构成非线性尺度空间。相比于线性尺度空间，非线性尺度空间并不会模糊原图像。</p>
+<p>首先本算法使用非线性扩散滤波来构建尺度空间，再使用FAST算法选择特征点，FAST算法再进行特征计算的过程中仅依赖像素之间的亮度差异，故可以满足实时性。</p>
+<p>然后在特征描述子生成阶段，采用Rotated BRIEF算法生成图像特征描述符，进一步提高了特征的鲁棒性。通过改进的特征算法得到的描述子具有旋转不变性、尺度不变性、光照不变性、空间不变性等，而且其鲁棒性、特征独特性和特征精度相比起ORB、SIFT算法提取出的特征要更好[31]。</p>
+<p>最后选择最小匹配距离的3倍作为最佳匹配阈值筛选特征点，并结合RANSAC 算法剔除错误点，确保特征点的鲁棒性。</p>
+<h2 id="三-4-特征检测和特征匹配实验结果"><a href="#三-4-特征检测和特征匹配实验结果" class="headerlink" title="三.4 *特征检测和特征匹配实验结果*"></a><strong>三.4</strong> <em><strong>*特征检测和特征匹配实验结果*</strong></em></h2><p>利用RGB-D数据集进行特征点检测与匹配实验，本实验选择开源数据及的office0数据集第0帧和第20帧作为特征点匹配实验，在Bundlefusion开源框架中，一般选择每10帧的最优帧作为关键帧，也就是在20帧的差距下，匹配算法可以完美的工作，那么也可以完美达到算法要求。下图36、图37、图38、图39分别为 ORB 算法、SIFT 算法、SURF 算法、改进的SIFT算法的特征点检测与特征匹配的实验结果。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps192-1711458934802-120.png" alt="img"> </p>
+<p>(a) ORB特征点检测算法</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps193-1711458934802-121.png" alt="img"> </p>
+<p>(b) ORB特征匹配算法</p>
+<p>图36 ORB算法特征点检测与匹配示意图</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps194-1711458934802-122.png" alt="img"> </p>
+<p>(a) SIFT特征点检测算法</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps195-1711458934802-123.png" alt="img"> </p>
+<p>(b) SIFT特征匹配算法 </p>
+<p>图37 SIFT算法特征点检测与匹配示意图 </p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps196-1711458934802-124.png" alt="img"> </p>
+<p>(a) SURF特征点检测算法</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps197-1711458934802-125.png" alt="img"> </p>
+<p>(b) SURF特征匹配算法 </p>
+<p>图38 SURF算法特征点检测与匹配示意图 </p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps198-1711458934802-126.png" alt="img"> </p>
+<p>(a) 改进的SIFT特征点检测算法果</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps199-1711458934802-127.png" alt="img"> </p>
+<p>(b) 本文加入RANSAC和距离阈值的匹配结果 </p>
+<p>图39改进的 SIFT 算法特征点匹配示意图</p>
+<p>根据图39与表31可得出结论：特征匹配的旋转鲁棒性和模糊鲁棒性由大到小依次为：改进的SIFT，ORB、SURF、SIFT。就特征点检测而言：ORB 算法检测的特征点较为集中，SURF 算法检测的特征点数量较多，且较为均匀的分布在图像中。如图39所示，改进的SIFT算法由于利用FAST角点检测法，故初次检测到的特征点数量较大，为了实现目标提取的快速匹配，在加权FAST特征点上使用非线性扩散滤波来构建尺度空间，给予鲁棒性强的Rotated BRIEF描述符，可实现快速匹配。我们选择将最小匹配距离的3倍作为最佳匹配阈值，然后结合RANSAC算法进行两两匹配，从而得到每种算法检测特征点和特征匹配所花费的时间，具体数据如表31所示。</p>
+<p>表31 特征点检测与匹配结果量化对比表 </p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>检测到的特征点数量（个）</th>
+<th>匹配的特征点数量（个）</th>
+<th>检测用时（秒）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ORB</td>
+<td>500</td>
+<td>221</td>
+<td>0.223</td>
+</tr>
+<tr>
+<td>SIFT</td>
+<td>1228</td>
+<td>482</td>
+<td>0.104</td>
+</tr>
+<tr>
+<td>SURF</td>
+<td>1689</td>
+<td>652</td>
+<td>0.221</td>
+</tr>
+<tr>
+<td>改进的SIFT</td>
+<td>791</td>
+<td>524</td>
+<td>0.083</td>
+</tr>
+</tbody></table>
+<p>在四种算法中，特征检测与特征匹配的用时ORB算法最长，SURF 算法次之，本文改进的SIFT 算法用时最短，SIFT算法用时比本文略长，用时相差0.021s。</p>
+<p>基于上述实验与分析，改进的SIFT算法匹配的特征点数量提升8%，检测时间下降20%，得出结论：实时三维重建系统对实时性要求高且需具备鲁棒性的特征点，故选择本文改进的SIFT算法作为实时三维重建的特征点检测与匹配算法，可以为三维重建算法提供最好的位姿参数估计。</p>
+<h2 id="三-5-本章总结"><a href="#三-5-本章总结" class="headerlink" title="三.5 *本章总结*"></a><strong>三.5</strong> <em><strong>*本章总结*</strong></em></h2><p>本章首先介绍了几种主流的在二维空间的特征点检测算法，包括ORB、SIFT、SURF，介绍了他们检测特征点的原理和分析了它们在实际应用中的优缺点，根据他们各自特点对特征点检测算法进行改进。第二，介绍了常见特征匹配滤波算法原理和相关特点，对输入数据和滤波方式进行分析，通过相关实验选择最合适本算法的滤波算法。第三，并提出一种基于SIFT特征点检测和Rotated BRIEF匹配的改进算法，并对该算法展开可视化与量化实验并分析。经过分析，认为本改进算法可以在三维重建空洞填补和提高深度图像质量上有显著提升。</p>
+<h1 id="第四章-基于深度数据和特征融合的三维重建"><a href="#第四章-基于深度数据和特征融合的三维重建" class="headerlink" title="第四章 *基于深度数据和特征融合的三维重建*"></a><strong>第四章</strong> <em><strong>*基于深度数据和特征融合的三维重建*</strong></em></h1><h2 id="四-1-三维重建算法框架"><a href="#四-1-三维重建算法框架" class="headerlink" title="四.1 *三维重建算法框架*"></a><strong>四.1</strong> <em><strong>*三维重建算法框架*</strong></em></h2><p>该重建算法基于BundleFusion改进而来，算法输入是从深度相机或离线文件获取的RGBD数据流，深度相机类型如上一章所讲，所得数据包括如下三个部分：深度图数据、彩色图数据和相机内参，而离线文件是作者自制的 .sens 文件，包括如下四个部分：深度图数据，彩色图数据，相机内参和经过优化的每一帧的相机位姿。输出是基于mesh网格模型的PLY(polygon fileformat)点云文件。</p>
+<p>选择BundleFusion作为基础算法改进的原因有以下几点：1、重建模型精细度较高。2、位姿计算较为稳定能达到同步更新的计算速度，实时性较强，同时支持断点重建。但缺点也较为明显，它适用于室内中型场景的扫描建模，对于大场景而言，由于其具有断点重建的稳定性，要消耗大量内存，对硬件要求很高，而对于较小模型，由于其使用特征点匹配过滤算法估计相机位姿，当待扫描场景物体较小时，纹理和光线的影响就很大，常导致其在扫描过程中帧间无法匹配，导致建模失败。</p>
+<p>如图2-1为三维重建算法的主要算法流程图，主要包括一下几个步骤：1.算法使用深度相机获取深度和彩色图信息，对于获取到的深度和彩色图信息会进行第二章的深度数据滤波和空洞补全算法。2.然后进行第三章介绍的改进的特征点匹配和过滤算法得出粗略的局部位姿。3.最后进行稀疏与稠密相结合的位姿优化。在这个过程中，同时会进行局部帧块关键帧的提取和全局关键帧的匹配过滤和优化，并以关键帧位姿重新映射优化局部倾位姿。4.得到优化位姿之后，用处理好的深度和彩色图信息按照位姿融合到截断符号距离函数中，详情见章节4.3，并不断对其中的体素保存的字段(深度，颜色与权重)进行更新。5.最终用章节4.4表面提取算法将保存的体模型转化为面模型并输出mesh 网格模型。以下是改进的三维重建算法具体实现。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps200-1711458934802-128.jpg" alt="img"> </p>
+<p>图41 实时三维重建算法流程图</p>
+<p>RGBD数据流的获取与数据的预处理：装有对应驱动的深度相机在重建算法运行时首先会获取相机型号与内参矩阵，并开始连续接收深度与彩色图信息，当重建算法因为手动终止，系统报错或正常扫描完成后，会将要求相机停止的指令传递给相机，并在重建算法中销毁创建的深度相机实例。读取.sens文件时，当重建算法开始运行便会获取.sens 文件中已经保存的信息头，包括相机型号，内参矩阵，标定矩阵以及.sens 文件中包含的帧数，当终止时也会销毁创建的文件IO 实例。两种获取方法都要对深度和彩色图信息进行保存，并进行自适应中值滤波去除噪声，然后进行孔洞补全方便后续特征点匹配和位姿优化。</p>
+<p>相机的位姿估计：首先进行局部匹配，在每个局部帧块（连续的10帧，固定划分为一个块）中利用改进的特征点匹配和过滤进行粗略的位姿估计。然后，在每个块结束后，对局部块中的每一帧进行稀疏稠密相结合的优化。接着进行全局匹配，从局部帧块中提取关键帧，再利用改进的特征点匹配和过滤算法对当前关键帧和先前块中提取出的关键帧进行位姿估计，并进行稀疏优化。根据此时的关键帧位姿对局部的粗略位姿再次进行调整，最终得到待融合的位姿。</p>
+<p>体素的融合与更新：此过程分为融合(integrate)和更新（reintegrate)两个步骤（详情见章节4.3），在融合时使用上述粗略的位姿矩阵，当确定某一个局部帧块的关键帧得到了优化后，将此局部帧块的帧按照原先粗略的位姿从体素中抽取出来，并重新用优化后的位姿融合进去，不断更新体素块中保存的信息直到待更新(reintegrate)的队列为空。</p>
+<p>体模型到面模型的提取与转化：对于体素中保存的体模型，首先利用MarchingCube算法将体素中的深度（详情见章节4.4），颜色和权重信息转换为三角网格的顶点和边信息，再将此网格信息保存成PLY点云模型。</p>
+<h2 id="四-2-相机位姿求解"><a href="#四-2-相机位姿求解" class="headerlink" title="四.2 *相机位姿求解*"></a><strong>四.2</strong> <em><strong>*相机位姿求解*</strong></em></h2><p>相机位姿求解是计算机视觉中的一个关键问题，目的是确定相机在三维空间中的位置（平移）和方向（旋转）。这通常涉及到从已知的场景信息（如标定点、已知几何结构或特征点）中推断出相机相对于这些场景的位姿。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps201-1711458934802-129.jpg" alt="img"> </p>
+<p>图42 三维空间坐标变换</p>
+<p>以单个点的三维位姿变换为例，如图42所示。三维空间由三个轴组成，所以一个空间点的位置可以由三个坐标（x,y,z）指定，这个坐标就是特征点，我们需要将相机中两个特征点组成特征向量，这样的一个特征向量与下一帧的特征向量会有差别，但是可以通过这个差别计算出相机的运动矩阵，三维空间的某个点坐标变化可以通过欧拉变换来描述。以下是相机位姿求解的具体步骤：</p>
+<p>1.所有特征点C在第一个相机坐标系下的三维坐标为<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps202-1711458934802-130.png" alt="img">，在第二个相机坐标系下匹配的三维坐标为<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps203-1711458934802-131.png" alt="img">。则相近两帧之间的旋转平移可以使用公式(41)所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps204-1711458934802-132.png" alt="img"></th>
+<th>(41)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2.公式(41)通常用迭代最近点ICP(Iterative Closest Point)求解。假设空间中的我们有两组已知的点<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps205-1711458934802-133.png" alt="img">和<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps206-1711458934802-134.png" alt="img">，我们需要找到一组参数来衡量这两组点之间“最有可能的旋转平移变换关系”，一般来说这组参数需要使变换前后的误差平方和达到最小，写成标准的数学问题就是：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps207-1711458934802-135.png" alt="img"></th>
+<th>(42)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>接下来只需要使用最小二乘法解得满足最小J的R，t。公式(42)具体推导过程较为复杂，故不展开讲解。</p>
+<p>以下是对公式(45)的推导过程：欧式变换由旋转和平移组成。我们首先考虑旋转，设某个单位正交基（e1,e2,e3）经过一次旋转变成了（<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps208-1711458934802-136.png" alt="img">）。那么对于同一坐标a，它会有两个坐标系下的坐标（a1,a2,a3）和（<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps209-1711458934802-137.png" alt="img">），所以有公式(43)如下所示[32]：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps210-1711458934802-138.png" alt="img"></th>
+<th>(43)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>如公式(44)所示，将上述等式的左右两边同时左乘<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps211-1711458934802-139.png" alt="img">，那么左边的系数就变成了旋转矩阵R。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps212-1711458934802-140.png" alt="img"></th>
+<th>(44)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>点集经过一次旋转（R）和进行一次平移（t）后，得到运动变化公式(45)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps213-1711458934802-141.png" alt="img"></th>
+<th>(45)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>所以，对于空间中的某一点，我们知道这个点在两个相机坐标系中的三维坐标，如何利用这两个三维坐标来求解这两个相机坐标系的运动就是3D-3D的位姿评估问题。</p>
+<h2 id="四-3-TSDF-数据融合"><a href="#四-3-TSDF-数据融合" class="headerlink" title="四.3 *TSDF**数据融合*"></a><strong>四.3</strong> <em><strong>*TSDF*</strong></em><em><strong>*数据融合*</strong></em></h2><p>在实时三维重建中，阶段距离符号(Truncated Signed Distance Function, TSDF)利用GPU 并行加速，将重建的地图存储在显存中，并行的对每个体素进行计算与更新。TSDF模型由三维小格子组成，具体来说，一个三维的TSDF模型由多个三维小方块组成，这些三维小方块被称为体素（Voxel）。每个体素内包含两个变量，一是用于生成重建表面的tsdf值，二是用于重建表面贴纹理的RGB值，下面是TSDF算法的步骤:</p>
+<p>1.准备工作：首先，建立长方体包围盒，长方体就是整个体素，根据显存大小和实际设置确定。然后，划分网格体素，对包围盒尽心划分n等分，体素的大小决于包围盒和划分体素的数目决定。我们将整个空间的体素全部存入GPU运算，每个GPU进程扫描处理一个坐标下的体素条。最后，对于构造的立体中的每个体素g（x,y,z），TSDF地图中（0，0，0）处体素对应实际场景坐标<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps214-1711458934802-142.png" alt="img">点，<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps215-1711458934802-143.png" alt="img">表示体素数量，转化g为世界坐标系下的三维位置点<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps216-1711458934802-144.png" alt="img">，如下公式(45)所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps217-1711458934802-145.png" alt="img"></th>
+<th>(46)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2.计算当前帧的TSDF值以及权重：</p>
+<p>计算相机估计的体素的距离。以一个体素在世界坐标系三维位置点<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps218-1711458934802-146.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps219-1711458934802-147.jpg" alt="img">为例。计算体素x在相机坐标系下的位置<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps220-1711458934802-148.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps221-1711458934802-149.jpg" alt="img">，相机相对于物理坐标系下的位姿是R和T，具体公式(47)如下所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps222-1711458934803-150.png" alt="img"></th>
+<th>(47)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>根据相机成像公式，可以得出相机估计的体素的距离<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps223-1711458934803-151.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps224-1711458934803-152.jpg" alt="img">。k表示相机的内参数矩阵，<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps225-1711458934803-153.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps226-1711458934803-154.jpg" alt="img">表示体素x投影在相机成像平面下的像素坐标。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps227-1711458934803-155.png" alt="img"></th>
+<th>(48)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>计算体素的TSDF值。如图43所示，真实距离减去相机估计的体素的距离等于sdf，p的sdf值为公式(49)所示。在体素的更新过程中，sdf是深度图的深度<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps228-1711458934803-156.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps229-1711458934803-157.jpg" alt="img">与相机估计的体素深度value(x)的差值。若sdf的值为0，那么说明体素的在体素网格中所处的位置合适，若sdf的值为负，那么说明体素的在体素网格中所处的位置合适。tsdf的公式(410)如下所示。t可以看作是体素x和截面对应点P深度差值的阈值。当体素x距离截面对应点P非常远的时候，它的tsdf值等于正负一。当体素x距离截面对应点P比较近的时候，它的tsdf值[ − 1 , 1 ]之间。用更为通俗的话说，当体素离表面非常近的时候，它的tsdf值接近于零；当体素离表面非常远的时候，它的tsdf值趋于正一或者负一。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps230-1711458934803-158.jpg" alt="img"> </p>
+<p>图43 TSDF截断距离示意图</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps231-1711458934803-159.jpg" alt="img"></th>
+<th>(49)</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps232-1711458934803-160.png" alt="img"></td>
+<td>(410)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>权重w(p)的计算公式(411)如下所示，其中<img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps233-1711458934803-161.png" alt="img">为投影光线与表面法向量的夹角。经过我们这一步就算出这一的所有体素的tsdf值以及权重值.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps234-1711458934803-162.jpg" alt="img"></th>
+<th>(411)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>3．更新TSDF模型</p>
+<p>如果当前帧是第一帧，则第一帧即是融合结果，否则需要当前帧与之前的TSDF模型进行融合。设tsdf(p)为体素p当前帧的TSDF值, w(p)为当前帧权重值，TSDF(p)为体素p的原来模型TSDF值，W(p)为原来模型融合权重值。现在我们要通过tsdf(p)更新TSDF(p)，如公式(412)所示:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps235-1711458934803-163.png" alt="img"></th>
+<th>(412)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>通过上述公式就可以将新的融合进融合帧内。每添加一帧深度数据，执行一遍2,3步的计算，知道最后输出结果给MarchingCube计算提出三角面。</p>
+<h2 id="四-4-曲面重建和纹理映射"><a href="#四-4-曲面重建和纹理映射" class="headerlink" title="四.4 *曲面重建和纹理映射*"></a><strong>四.4</strong> <em><strong>*曲面重建和纹理映射*</strong></em></h2><p>点云曲面三维重建的方式有多种。本文采用MC方法提取三角网格表面。MC算法也被称作等值面提取（Isosurface Extraction），是面绘制算法中的经典算法，算法的主要精髓为：在三维离散数据场中通过线性差值来逼近等值面。该算法的主要作用是，提取空间中的等值面，并用三角面近似表示出来，以下是曲面重建的主要步骤。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps236-1711458934803-164.jpg" alt="img"> </p>
+<p>   图a深度相机中的等值面                      图b体素等值面的表示</p>
+<p>图44 MC算法等值面的提取</p>
+<p>在我们获取到当前帧的深度信息以后，可以将每张深度图在三维空间三角化，如图44 (a)所示，得到多个三角面片和等值面值C。从体素网格数据体中提取一个单元体,获取该单元体8个顶点的值，坐标位置等；如图44 (b)所示，首先计算出当前单元体8个顶点的阶段距离符号TSDF值，并与给定的等值面值C进行比较,得到该单元体的状态表(edgeTable、triTable)。再根据当前单元体的状态表进行索引，找出与等值面相交的单元体棱边，如图45（a）所示，体素和等值面相交的状态可以被归纳为如图15种基本构型[34]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps237-1711458934803-165.jpg" alt="img"> </p>
+<p>图a 体素和等值面相交的15种基本构型             图b 体素中的等值面</p>
+<p>图45 体素等值面相交模型</p>
+<p>用这些交点连接成三角面片以逼近表示该体素内的等值面，根据线性插值的结果连线，得到曲面重建的结果，如图45（b）所示。</p>
+<p>将获取的点云通过TSDF数据融合与MC算法实现曲面重建，生成的mesh网格模型 ，如图46(a)和图47(a)所示，为增强重建真实感，需将纹理映射到网格模型，网格的颜色是依据色彩加权融合方式求解的。纹理映射后的模型如图46(b)和图47(b)所示。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps238-1711458934803-166.jpg" alt="img"> </p>
+<p>​    (a)  曲面重构场景一                          (b)  纹理映射场景一 </p>
+<p>图46 带纹理曲面重构场景一</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps239-1711458934803-167.jpg" alt="img"> </p>
+<p>   (a)  曲面重构场景二                        (b)  纹理映射场景二 </p>
+<p>图47 带纹理曲面重构场景二 </p>
+<h2 id="四-5-实时重建可视化分析"><a href="#四-5-实时重建可视化分析" class="headerlink" title="四.5 *实时重建可视化分析*"></a><strong>四.5</strong> <em><strong>*实时重建可视化分析*</strong></em></h2><p>利用RGB-D数据集进行三维重建算法可视化实验，下图48到图49分别为三维重建噪声修复、空洞填充、边缘顺滑和实时重建的实验结果。</p>
+<p>将开源数据及的office3.sens数据集作为改进的重建算法输入，运行并生成如图48(a)的重建模型，会发现在a处会有重建噪声，图48(c)在b处发现重建后模型部分缺失，在改进的三维重建算法输入后，生成的重建模型a处噪声消失，在b处模型把手产生了三维模型，可视化实验证明经过改进的三维重建算法将产生更好的重建效果。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps240-1711458934803-168.jpg" alt="img"> </p>
+<p>   (a)  原始重建图像                            (b)  改进后噪声消失</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps241-1711458934803-169.jpg" alt="img"> </p>
+<p>  （c）  改进前椅子把手缺失                   (d)  改进后椅子把手补充</p>
+<p>图48 重建算法改进前后office3模型效果对比</p>
+<p>将开源数据集的office0.sens数据集作为原始的重建算法输入，运行并生成如图49（a）的重建模型，会发现在横梁c处边缘重建并不顺滑，两个深度差之间产生了较大的深度孔洞，在改进的三维重建算法输入后，生成的重建模型a处噪声消失，在横梁c处模型边缘变得顺滑，两个深度差较大位置之间孔洞变小，可视化实验证明经过改进的三维重建算法将产生更好的重建效果。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps242-1711458934803-170.jpg" alt="img"> </p>
+<p>  （a） 改进前边缘不顺滑         (b) 改进后边缘顺滑</p>
+<p>图49 重建算法改进前后office0模型效果对比</p>
+<p>点数（Vertice）与面数（Faces）使用meshlab2020.12测试，对比生成改进后的点云文件，可见比原BundleFusion生成的PLY文件面数87%，点数降低81%，可以推测可能是补全算法减少了许多空洞所致，如下表41所示:</p>
+<p>表41 算法改进前后重建模型对比结果</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>原始Office3</th>
+<th>改进后Office3</th>
+<th>原始Office3</th>
+<th>改进后Office3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vertices</td>
+<td>6362095</td>
+<td>1153507</td>
+<td>5706316</td>
+<td>1056243</td>
+</tr>
+<tr>
+<td>Faces</td>
+<td>12597813</td>
+<td>23568121</td>
+<td>11268611</td>
+<td>25453985</td>
+</tr>
+</tbody></table>
+<h2 id="四-6-本章小结"><a href="#四-6-本章小结" class="headerlink" title="四.6 *本章小结*"></a><strong>四.6</strong> <em><strong>*本章小结*</strong></em></h2><p>本章首先概括论述本文三维重建的算法框架。其次，对本文使用的相机位姿求解展开理论研究，并将其融入实时重建系统。然后，介绍TSDF数据融算法与隐式函数的表面重建算法Matching Cubes(MC)，并通过加权纹理映射获得带纹理的曲面重建模型，最后通过开源数据对原始三维重建算法与改进的三维重建算法进行对比分析，分析得出经过改进使原始的三维重建算法得到了提升。</p>
+<h1 id="第五章-基于增强现实显示的空间感知系统"><a href="#第五章-基于增强现实显示的空间感知系统" class="headerlink" title="第五章 *基于增强现实显示的空间感知系统*"></a><strong>第五章</strong> <em><strong>*基于增强现实显示的空间感知系统*</strong></em></h1><h2 id="五-1-增强现实感知系统实现"><a href="#五-1-增强现实感知系统实现" class="headerlink" title="五.1 *增强现实感知系统实现*"></a><strong>五.1</strong> <em><strong>*增强现实感知系统实现*</strong></em></h2><h3 id="五-1-1-软件平台搭建"><a href="#五-1-1-软件平台搭建" class="headerlink" title="五.1.1 *软件平台搭建*"></a><strong>五.1.1</strong> <em><strong>*软件平台搭建*</strong></em></h3><p>这款基于增强现实的应急救援多功能头盔在软件功能方面进行了创新设计，以满足实际使用场景的需求。它集成了多项功能，包括三维重建、增强现实显示、视频录制、展示图片、气体检测、红外显示、手势识别等。</p>
+<p>首先，通过头盔内置的摄像头和传感器，该头盔能够实时捕捉救援现场的环境信息，并将其转化为虚拟的三维模型。这使得救援人员可以准确地了解现场情况，提供定位、导航和决策支持。其次，增强现实显示功能可以将虚拟信息叠加在现实世界中，帮助救援人员在复杂环境下快速识别逃生路径、障碍物或关键目标。这种叠加的虚拟信息可以大大提高救援的效率和精确性。同时，头盔还具备视频录制功能，能够记录下救援过程的实时画面。</p>
+<p>总的来说，这些软件功能的创新提升了应急救援的效率和安全性，为救援人员提供了强大的工具和支持，使他们能够更好地应对各种复杂的救援任务。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps243-1711458934803-171.jpg" alt="img"> </p>
+<p>图51 增强现实感知系统图</p>
+<h3 id="五-1-2-硬件平台搭建"><a href="#五-1-2-硬件平台搭建" class="headerlink" title="五.1.2 *硬件平台搭建*"></a><strong>五.1.2</strong> <em><strong>*硬件平台搭建*</strong></em></h3><p>光波导模块：本次方案采用与HoloLens相同款式的光波导技术作为显示模块。随着采用光波导技术的HoloLens 1、2产品问世后，光波导逐渐被视为满足AR眼镜成像需求的主流解决方案。光波导的“全反射”在保证成像清晰、图像对比度高的基础上，还能为用户提高较大的视场角（Field of View，FOV）[35]。其成像色彩丰富，对比度较高。阵列光波导成像原理是特殊镜面阵列的反复“反射投射”，这使得耦合光传播由几何方式改变，并没有任何纳米级结构影响，因此其成像质量、色彩及对比度能达到较高水平。结合以上优点，其他AR显示方案无法取代阵列光波导的优势。</p>
+<p>LPM24阵列光波导能够提供高分辨率的显示效果。它的分辨率为1920*1080p@60hz，支持信号输出的电脑连接，可以呈现细致、清晰的图像和文字。阵列光波导具有广阔的视场角，能够提供宽广的视野范围。用户佩戴后可以获得更加宽阔的视觉体验，不会感到局限性。阵列光波导具有高透明度，能够有效地传输光线。这意味着用户可以清晰地看到显示在光波导上的图像，不会有过多的透光损失。</p>
+<p>LPM24阵列光波导样品如图52所示：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps244-1711458934803-172.jpg" alt="img"></td>
+</tr>
+</tbody></table>
+<p>图52 LPM24阵列光波导样品图</p>
+<p>总的来说，LPM24阵列光波导具有高分辨率、宽视场角、轻便舒适、高透明度和定制性强等优点，我们认为，LPM24阵列光波导方案是本次应用的最佳方案。</p>
+<p>深度相机介绍： RealsenseD435i相机包含1个RGB相机、2个红外相机以及1个红外发射器，此外还有1个IMU单元，该产品可以看作是D435的升级版，和D435的区别就在于多了一个IMU。</p>
+<p>需要注意的是，它不是传统意义上理解的双目RGB相机成像，它的深度成像原理更像是主动立体红外成像。有了深度图(3D点云)和对应的RGB影像，因此也就很容易获得RGB-D点云了。因此从相机的成像角度去看，它是RGB-D相机[36]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps245-1711458934803-173.jpg" alt="img"> </p>
+<p>图53 RealsenseD435i相机模块</p>
+<p>气体检测模块：SHT35温湿度传感器模块是SHT2x系列传感器的新一代继承者，提高了可靠性和精度规格，如增强信号处理和温湿度极限报警模式，以及高达1 MHz的通信速度。SHT35传感器具有快速响应时间，可在几秒钟内提供准确测量结果。这对应急救援十分重要，快速了解应急环境对救援者至关重要。SHT35传感器通过I2C总线提供数字输出，与各种微控制器兼容，便于传输、处理和存储，为救援人员提供实时环境检测数据。传感器的湿度测量范围为0-100%RH，温度测量范围为-40-125℃。在应急救援情况下，使用SHT35温湿度传感器测量温度和湿度变化提供环境状态和潜在风险信息。SHT35传感器低功耗、长期稳定，无需频繁校准。综上所述，SHT35传感器在应急救援中可提供快速、准确、可靠温湿度测量结果。温湿度偏差参考图如图54所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps246-1711458934803-174.jpg" alt="img"> </p>
+<p>图54 温湿度偏差参考图</p>
+<p>气体传感器模块：SGP30气体传感器是一款单一芯片上具有多个传感元件的金属氧化物室内气体传感器[37]，能够快速响应时间，能够在短时间内提供准确的测量结果。传感器能够检测多种常见的有害气体，如VOCs和CO2，这些气体在许多应急情况中可能存在。通过实时监测这些气体的浓度，救援人员可以判断空气质量和潜在的健康风险，并根据需要调整救援策略。SGP30传感器支持实时监测和远程通信，可以与其他设备或系统进行连。这也意味着现场搜集人员可以实时地获得有关现场空气质量地信息，从而做出快速地决策并调配资源[38]。综上所述，在面对应急救援情况时，使用SGP30传感器在应急救援情况下检测有害气体是可行的。SGP30气体传感器实物图如下图55(a)：</p>
+<p>内部集成4个气体传感元件，可以输出空气质量信号，包括：TVOC（Total Volatile Organic Compounds，总挥发性有机物），量程为0<del>60000ppb；CO2浓度，量程400</del>60000ppm等。</p>
+<p>可燃气体检测模块：MQ-9气体传感器对一氧化碳、甲烷、液化气的灵敏度高，这种传感器可检测多种含一氧化碳及可燃性的气体，适用于应急救援情况32。它可以提供及时的可燃气体浓度信息，支持救援人员进行有效的风险评估和决策，确保救援行动的顺利进行。MQ-9一氧化碳模块如下图55(b)所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps247-1711458934803-175.png" alt="img"><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps248-1711458934803-176.jpg" alt="img"> </p>
+<p>​      （a）               （b）</p>
+<p>图55 可燃气体传感器和SGP30气体传感器实物图</p>
+<p>陀螺仪模块：MPU6050姿态传感器是一种用于测量物体姿态的传感器，它可以检测物体的加速度和角速度，并计算出物体的方向和角度。可以在本次系统中对救援人员在漆黑一片的时候，提供适当的方向参考。MPU6050可以实现较高的测量精度和稳定性，同时功耗较低，适合于嵌入式系统和移动设备[39]。总之，MPU6050是一种非常实用的姿态传感器，可以满足本次应用的要求。如图56所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps249-1711458934804-177.jpg" alt="img"> </p>
+<p>图56 MPU6050姿态传感器</p>
+<p>单目摄像头：针对本系统的需求，我们选择了DF100-720P型号的单目摄像头。该摄像头具有1&#x2F;4英寸的CMOS传感器，像素尺寸为3um*3um，支持高清100万像素的工业级图像采集。它采用USB总线供电，工作电流约为80-100mA，工作电压为5V。信噪比为39dB，确保图像质量清晰。摄像头的曝光时间为33.33ms&#x2F;fps，输出格式为MJPG，同时支持YUY2(YUYV)格式。分辨率为1920x1080，帧率为30fps。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps250-1711458934804-178.png" alt="img"> </p>
+<p>图57 DF100-720P型号的单目摄像头</p>
+<p>综合考虑本系统的光波导显示分辨率也为1920x1080，我们可以得出结论，DF100-720P摄像头的规格和性能能够满足本系统的功能实现。通过与系统的光波导显示分辨率相匹配，我们可以确保图像在显示过程中不会失真或失真最小化[40]。</p>
+<p>红外相机模块：基于增强现实的应急救援多功能头盔使用 Xmodule 系列T5-612-68非制冷测温热像模组，该模组是基于陶瓷封装非制冷氧化钒红外探测器开发的一款高性能红外热成像产品33，该产品采用并行数字接口输出，控制接口丰富，可适配接入各种智能处理平台，具备高性能、低功耗、体积小、易于开发集成的特点，能够满足各类红外测温应用的二次开发需求，如下图58所示[41]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps251-1711458934804-179.png" alt="img"> </p>
+<p>图58 T5-612-68模块实物图</p>
+<p>该模组具有产品体积小，易于集成；采用 FPC 接口，接口丰富，易于其它平台连接；产品功耗低；高图像品质；测温精准；标准数据接口，支持二次开发，易于集成，支持接入各种智能处理平台等特点，可以满足本次设计要求。</p>
+<p>硬件组合：考虑到本系统是灾害救援场景下的增强现实显示系统，所以需要将硬件进行组合并且方便测试者进行佩戴，所以本系统设计灾害救援显示头盔，使用背包式电脑作为计算单元，将传感器组合在一起。本次设计的灾害救援显示头盔一代如下图59所示：</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps252-1711458934804-180.jpg" alt="img"> </p>
+<p>图59 灾害救援增强现实空间感知头盔一代</p>
+<p>增强现实感知头盔二代如下图510所示</p>
+<p><img src="/img/jiazai.png" data-original="file:///C:\Users\peter\AppData\Local\Temp\ksohtml14272\wps253.png" alt="img"> </p>
+<p>图510 灾害救援增强现实空间感知头盔二代</p>
+<h2 id="五-2-系统仿真和测试"><a href="#五-2-系统仿真和测试" class="headerlink" title="五.2 *系统仿真和测试*"></a><strong>五.2</strong> <em><strong>*系统仿真和测试*</strong></em></h2><p>空间感知仿真测试是一种结合了三维重建和增强现实显示的多功能系统，用于灾害救援场景下，具有三维重建、增强现实显示、气体检测等功能的多功能系统。</p>
+<h3 id="五-2-1-三维重建"><a href="#五-2-1-三维重建" class="headerlink" title="五.2.1 *三维重建*"></a><strong>五.2.1</strong> <em><strong>*三维重建*</strong></em></h3><p>通过RGBD相机获取深度图像，然后使用三维重建算法将深度数据和位姿估计进行融合，得到场景的三维结构。接着，通过TSDF和MC算法对融合数据进行重建，并添加颜色信息[23]。最后，通过可视化渲染算法生成仿真测试的输出。这种方法在机器人导航、虚拟现实等领域有广泛应用，能提供准确的场景信息，并可以实时产生三维模型数据[24]，重建过程如图511所示。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps254-1711458934804-182.jpg" alt="img"> </p>
+<p>图511 增强现实三维重建过程展示</p>
+<h3 id="五-2-2-增强现实显示"><a href="#五-2-2-增强现实显示" class="headerlink" title="五.2.2 *增强现实显示*"></a><strong>五.2.2</strong> <em><strong>*增强现实显示*</strong></em></h3><p>在增强显示仿真中，使用Unity和EasyAR库开发的程序可以实现以下功能：程序通过单目摄像头获取图像数据，并利用图像识别技术识别预先输入的皮卡丘图片。当输入带有目标图像的视频时，程序可以检测到目标图像，并计算出其在图像中的位置。接着，程序利用OpenGL等三维显示工具，在光波导眼镜中展示一个三维物体（如立方体），从而呈现给佩戴者的增强现实场景，如图512所示[42]。</p>
+<p><img src="/img/jiazai.png" data-original="file:///C:\Users\peter\AppData\Local\Temp\ksohtml14272\wps255.png" alt="img"></p>
+<p>图512 增强显示识别目标图像显示空间立方体</p>
+<p>这种增强显示仿真技术能够将虚拟物体与现实场景相结合，为用户带来身临其境的视觉体验。通过使用图像识别和计算机图形学算法，程序能够准确地定位和跟踪目标图像，并以三维形式在光波导眼镜中呈现[43]。这样，佩戴者可以透过眼镜看到现实场景中的目标图像，并在其周围展示虚拟的三维物体，营造出增强现实的效果[44]。</p>
+<h3 id="五-2-3-气体检测"><a href="#五-2-3-气体检测" class="headerlink" title="五.2.3 *气体检测*"></a><strong>五.2.3</strong> <em><strong>*气体检测*</strong></em></h3><p>气体检测功能的仿真测试主要涉及温度、湿度、二氧化碳、总挥发性有机化合物、可燃气体以及三个方向的加速度和角动量（XYZ轴）等参数的检测。通过仿真测试，可以验证气体检测系统的准确性、可靠性和性能[45]。</p>
+<p>在测试过程中，使用虚拟环境模拟不同气体条件和场景，生成模拟数据以验证检测算法。针对温度和湿度检测，可以模拟不同温湿度值，观察检测系统的响应和准确度。针对二氧化碳、总挥发性有机化合物和可燃气体的检测，可以模拟不同浓度的气体，评估检测系统对于不同浓度范围的响应和灵敏度，如所图 513示[46]。</p>
+<p><img src="/img/jiazai.png" data-original="/./%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/wps256-1711458934804-184.jpg" alt="img"> </p>
+<p>图 513增强现实显示周围二氧化碳和可燃性气体气体含量</p>
+<p>此外，还可以显示佩戴者的加速度和减速度。通过模拟不同的运动场景，如匀速、加速和减速等，生成相应的加速度和减速度数据，并输入到增强现实显示系统中进行显示[47]。</p>
+<h2 id="五-3-本章小结"><a href="#五-3-本章小结" class="headerlink" title="五.3 *本章小结*"></a><strong>五.3</strong> <em><strong>*本章小结*</strong></em></h2><p>本章首先说明了增强现实感知系统下的软件平台和硬件平台的搭建，论证了本次实验所用的软硬件满足实验需求。然后，对本文使用的增强现实显示系统展开介绍，对系统软件和硬件环境进行展开介绍。最后通过增强现实显示系统进行可视化实验，表明本次设计的增强显示感知系统的顺利运行[48]。</p>
+<h1 id="第六章-结论与展望"><a href="#第六章-结论与展望" class="headerlink" title="第六章 *结论与展望*"></a><strong>第六章</strong> <em><strong>*结论与展望*</strong></em></h1><h2 id="六-1-主要结论"><a href="#六-1-主要结论" class="headerlink" title="六.1 *主要结论*"></a><strong>六.1</strong> <em><strong>*主要结论*</strong></em></h2><p>本文研究的是增强现实空间感知关键技术和应用研究，旨在解决的问题包括：实时三维重建模型时存在噪声干扰、空洞未填充和边缘不平滑等问题；特征点法求解相机位姿变换精度较低，特征匹配不准确问题；空间感知头盔平台的软硬件搭建问题。在此基础上，首先，详细介绍了空间深度信息的获取和预处理，包括集中深度信息获取方式的对比，选择适合本方案的采集方式，在此基础上分析数据获取过程中产生的噪声和个人数据集的制作、介绍了常见的数据滤波算法，提出改进的滤波和空洞补全算法。其次，详细论述了基于视觉的特征点检测算法，特征匹配算法，在此基础上提出了改进的特征点检测和匹配算法。然后介绍了tsdf数据融合和纹理映射。综合上述算法完成介绍了基于BundleFusion的室内实时三维重建框架的改进与重建的实现。最后构建了增强现实空间感知系统，介绍了感知系统和显示系统的平台搭建，最后给出系统的使用效果演示。</p>
+<p>本文的研究内容和成果如下所述：</p>
+<p>1.针对Bundlle Fusion采集的图像噪声和空洞问题，本文提出了一种改进的深度图滤波和补全算法。该算法对于噪声进行滤波算法的对比，选择自适应中值滤波进行数据处理。结合空洞周围深度信息，合理的进行空洞填充。可视化实验证明了重建效果优于原始算法，且该方法相较于原深度图的相似度指标RSIM平均为0.8，均方根误差RMSE 为0.2，且经过补全的深度图重建的场景效果更优。</p>
+<p>2.针对特征点检测与匹配算法展开原理论述与相关对比试验，实时重建过程既要确保特征点的鲁棒性，又要提高运算速度。故本文对原始代码SIFT算法提出改进，改进后的算法特征点数量大于SIFT算法，且检测和匹配用时小于SIFT 算法。</p>
+<p>3.改进的特征点检测算法和空洞补全算法代入原始Bundle Fusion算法，使用ICP算法估计相机位姿，对获得的模型利用TSDF 和MC算法进行曲面重建，并进行纹理映射，获得局部大场景的带纹理曲面重建模型以及完整室内的彩色点云模型。改进后的算法平均帧率为35fps，满足实时性的需求，且可视化实验由于原算法。</p>
+<p>4.使用各种硬件搭建了增强现实感知系统的头盔，编写软件赋予系统其他感知功能。</p>
+<p>论证了本次实验所用的软硬件满足实验需求。然后，对本文使用的增强现实显示系统展开介绍，对系统软件和硬件环境进行展开介绍。最后通过增强现实显示系统进行可视化实验，表明本次设计的增强显示感知系统的顺利运行。</p>
+<h2 id="六-2-研究展望"><a href="#六-2-研究展望" class="headerlink" title="六.2 *研究展望*"></a><strong>六.2</strong> <em><strong>*研究展望*</strong></em></h2><p>本文对室内实时三维重建的深度图孔洞问题、位姿估计与优化问题取得初步成果，但与此同时，仍有许多方面可以改进。未来针对室内的实时三维重建可从以下方面着手展开： </p>
+<ol>
+<li>寻找基于实例的深度补全方式。本文采集设备为Realsense D435i，获取的深度图分辨率较低且包含孔洞与噪声，对重建具有较大影响。因此，建议将获取的对应彩色图像进行实例分割，同时获取语义信息与位置关系。例如，对于与相机等距离的两个紧贴的杯子，若未进行实例分割，则语义信息相同，可能重建融合为一个物体，这样可以更好地完成深度补全。</li>
+<li>融合直接法与特征点法的特征提取与轨迹追踪方式。目前，提取的是二维图像的点，而配准过程利用的是三维点云的相关数据。在此过程中，可能会产生误差。因此，可直接选用3D特征，如PFH、FPFH、VFH等点云特征检测和描述方式，完成相关位姿轨迹追踪过程，以更高效地完成重建。 </li>
+<li>在配准时，考虑采用深度学习的方法代替传统算法。利用深度学习提取更深层次的特征上的优势，解决由于相机快速移动导致的特征重合过少，从而降低配准的难度。</li>
+</ol>
+<p><em><strong>*参考文献*</strong></em></p>
+<p>[1] 郑智鸿.基于深度学习的弱监督三维点云语义分割方法研究[D].华东师范大学,2024.</p>
+<p>[2] 苟玉晓.基于图优化的单目视觉SLAM技术的研究与实现[D].西南交通大学,2020.</p>
+<p>[3] 王立玲,苏华强,马东.基于ICP匹配和贝叶斯逆传感器模型的地图构建[J].激光杂志,2020,41(12):50-56.</p>
+<p>[4] 王亮.基于深度相机的苹果采摘机器人的目标检测和路径规划算法研究[D].江苏大学,2019.</p>
+<p>[5] 韦秋吉.基于特征增强的单目图像深度估计算法研究及系统实现[D].北京邮电大学,2023.</p>
+<p>[6] 王丽佳.基于图优化的单目视觉SLAM技术研究[D].华中科技大学,2016.</p>
+<p>[7] 张樱凡.基于多传感器融合的室内环境探测飞行器设计[D].西南科技大学,2018.</p>
+<p>[8] 胡仕林.基于目标识别的苹果采摘机器人控制方法研究[D].江苏科技大学,2023.</p>
+<p>[9] 张秉京.基于机器视觉的铝丝楔焊机定位方法研究[D].吉林大学,2018.</p>
+<p>[10] 朱新龙.基于分布式计算的视频测速算法研究[D].华侨大学,2020.</p>
+<p>[11] 王燕,王鹏辉.激光主动成像技术综述[J].电子质量,2019,(07):1-3.</p>
+<p>[12] 方祯煜.基于深度稀疏低秩网络的图像去噪算法研究[D].南京邮电大学,2023.</p>
+<p>[13] 时妙文.基于结构相关性的图像去噪算法研究[D].山东大学,2023.</p>
+<p>[14] 姚泽烽,程显毅,谢璐.基于ORB和最小凸包的感兴趣区域检测方法研究[J].计算机应用研究,2018,35(10):3186-3188.</p>
+<p>[15] 李涵星.基于单幅叶子图片的三维重建技术研究[D].西北农林科技大学,2023.</p>
+<p>[16] 于新.单幅平面图像的三维重建技术的研究[D].青岛科技大学,2022.</p>
+<p>[17] 王靖鑫.基于单幅图像的三维重建技术研究[D].河北工业大学,2014.</p>
+<p>[18] 曹宇.单幅图像服装三维重建技术研究[D].西安电子科技大学,2020.</p>
+<p>[19] 刘培扬.基于传统特征与卷积特征融合的建筑图像关键点提取[D].东华大学,2023.</p>
+<p>[20] 何敬.基于点线特征匹配的无人机影像拼接技术[D].西南交通大学,2013.</p>
+<p>[21] 张友浪.基于RGB-D的视觉里程计研究[D].燕山大学,2023.</p>
+<p>[22] 张梦娇.基于双目视觉技术的果园割草机避障系统设计[D].河北农业大学,2019.</p>
+<p>[23] Islam U Q ,Ibrahim H ,Chin K P , et al.MVS‐SLAM: Enhanced multiview geometry for improved semantic RGBD SLAM in dynamic environment[J].Journal of Field Robotics,2023,41(1):109-130.</p>
+<p>[24] Shiyu S ,Ji C ,Yujiang Z , et al.SCE-SLAM: a real-time semantic RGBD SLAM system in dynamic scenes based on spatial coordinate error[J].Measurement Science and Technology,2023,34-42.</p>
+<p>[25] Yanfeng T ,Jing C ,Yongtian W .Geometry-guided multilevel RGBD fusion for surface normal estimation[J].Computer Communications,2023, 73-84.</p>
+<p>[26] Yujian Z ,Ziyan Z ,Ping Z , et al.Salient object detection for RGBD video via spatial interaction and depth-based boundary refinement[J].Complex Intelligent Systems,2023,9(6):6343-6358.</p>
+<p>[27] Xinyang Z ,Qinghua L ,Changhong W , et al.Robust Depth-Aided RGBD-Inertial Odometry for Indoor Localization[J].Measurement,2023,209-210.</p>
+<p>[28] Mauricio H ,Andrés C D ,Alejandro A V , et al.Using RGBD cameras for classifying learning and teacher interaction through postural attitude[J].International Journal on Interactive Design and Manufacturing (IJIDeM),2023,17(4):1755-1770.</p>
+<p>[29] 丛佩超,崔利营,万现全等.动态场景下基于RGB-D相机的移动机器人定位算法研究[J].广西科技大学学报,2023,34(04):92-100. </p>
+<p>[30] 李少伟,钟勇,杨华山等.融合激光雷达和RGB-D相机建图[J].福建理工大学学报,2023,21(06):551-557.</p>
+<p>[31] 郭旭达,宋勇磊.一种基于RGB-D相机的语义地图构建方法[J].计算机与数字工程,2023,51(10):2438-2443.</p>
+<p>[32] 孙学成.RGB-D相机与激光雷达融合的巷道重建SLAM方法研究[D].中国矿业大学,2023.</p>
+<p>[33] 范永祥,冯仲科,苏珏颖等.RGB-D SLAM增强现实原木检尺系统构建与测试[J].农业机械学报,2023,54(12):280-287.</p>
+<p>[34] 黄心怡,张勇.基于RGBD融合图像及改进U-net的轨道区域分割方法研究[J].铁路计算机应用,2023,32(07):1-6.</p>
+<p>[35] 薛冬妮,李峻屹.基于RGBD技术面向刑事侦查的人脸识别系统[J].信息技术,2023,(07):142-145+151.</p>
+<p>[36] 王承佳.视觉惯性组合导航算法的场景鲁棒性研究[D].西安工业大学,2022.</p>
+<p>[37] 金炜翔,赖忠喜.一种基于STM32的实验室监控系统设计[J].电子技术与软件工程,2022,(10):99-103.</p>
+<p>[38] Shan D ,Su J ,Wang X , et al.VID-SLAM: Robust Pose Estimation with RGBD-Inertial Input for Indoor Robotic Localization[J].Electronics,2024,13-14:</p>
+<p>[39] Jingyuan Z ,Wenyi Z ,Bo D , et al.Autonomous driving system: A comprehensive survey[J].Expert Systems With Applications,2024,2421-2836-.</p>
+<p>[40] Jian W ,Lili W .Panoramic Ray Tracing for Interactive Mixed Reality Rendering based on 360° RGBD Video.[J].IEEE computer graphics and applications,2023,2267-2658</p>
+<p>[41] Yu Y ,Zhu K ,Yu W .YG-SLAM: GPU-Accelerated RGBD-SLAM Using YOLOv5 in a Dynamic Environment[J].Electronics,2023,12-20.</p>
+<p>[42] Sandoval C A M ,Rodriguez H A ,Gómez R S , et al.Determination of optimal experimental conditions for accurate 3D reconstruction of the magnetization vector via XMCD-PEEM.[J].Journal of synchrotron radiation,2024,2006-2110.</p>
+<p>[43] Sandoval C A M ,Rodriguez H A ,Gómez R S , et al.Determination of optimal experimental conditions for accurate 3D reconstruction of the magnetization vector via XMCD-PEEM.[J].Journal of synchrotron radiation,2024,6591-6587.</p>
+<p>[44] Yu Z ,Shen Y ,Zhang Y , et al.Automatic crack detection and 3D reconstruction of structural appearance using underwater wall-climbing robot[J].Automation in Construction,2024,2301-2322-.</p>
+<p>[45] Oliveira G F ,Smith A A .A morphofunctional study of the jumping apparatus in globular springtails[J].Arthropod Structure and Development,2024,7910-8333-.</p>
+<p>[46] Singhal S ,Jairam P M ,Jhala K , et al.Abnormal Gas at Chest Radiography: A Primer with CT and 3D Reconstruction Correlation.[J].Radiographics : a review publication of the Radiological Society of North America, Inc,2024,30146-230146.</p>
+<p>[47] Cifuentes D ,Draisma J ,Henriksson O , et al.3D Genome Reconstruction from Partially Phased Hi-C Data.[J].Bulletin of mathematical biology,2024,86(4):33-34.</p>
+<p>[48] Xiao S ,Fei S ,Ye Y , et al.3D reconstruction and characterization of cotton bolls in situ based on UAV technology[J].ISPRS Journal of Photogrammetry and Remote Sensing,2024,20-116.</p>
+<p><em><strong>*附录*</strong></em> <em><strong>*A*</strong></em></p>
+<p><em><strong>*附录*</strong></em> <em><strong>*A*</strong></em> <em><strong>*题目*</strong></em></p>
+<p>孔洞补全伪代码</p>
+<p>&#x2F;&#x2F; 将深度值为零的像素设置为负无穷大&#x2F;&#x2F; 计算并存储深度值（深度值除以深度位移值）&#x2F;&#x2F;发现深度值为0的深度值&#x2F;&#x2F;保存上一个像素的深度值predepth和preidx值&#x2F;&#x2F;保存下一个不为0的像素的深度值nextdepth和nextidx值&#x2F;&#x2F;通过两个值计算出过度梯度值halfdepth，再进行 &#x2F; m_sensorData-&gt;m_depthShift，并变为float，填入从ij+1到ik-1的所有depth[i]</p>
+<p><em><strong>*在*</strong></em><em><strong>*学期间的研究成果*</strong></em></p>
+<p><strong>一、发表论文</strong></p>
+<p><strong>1.</strong> Yaohui Hou, Jianwen Song, Lijun Wang. Application of 3D reconstruction technology in VR industry[C]&#x2F;&#x2F; SID Symposium Digest of Technical Papers. 2023, 52: 732-734.</p>
+<p><strong>2.</strong> Yaohui Hou, Jianwen Song, Lijun Wang. Based on the status quo of virtual reality and prospects for future development[C]&#x2F;&#x2F; SID Symposium Digest of Technical Papers. 2023, 52: 732-734.</p>
+<p><strong>二、参与课题</strong></p>
+<p><strong>1.</strong> 国家重点研发计划项目：《航空医学应急救援关键技术装备研发及应用示范》（项目号：2020YFC0811004），子课题：航空医学应急救援沉浸式模拟训练器。</p>
+<p><strong>三<strong><strong>、专利或</strong></strong>软件著作权申请及授权情况</strong></p>
+<p><strong>1.</strong> 航空医学救援训练动态三维手势识别软件V1.0（登记号：2023SR0658328）</p>
+<p>​	</p>
+<p><em><strong>*致  谢*</strong></em></p>
+<p>经过几个月的努力，本论文在我敬爱的导师——王立军教授的指导下完成，也感谢我的老师——李正平老师的辅导，从开始论文选题到系统的实现，再到论文文章的实现，每走一步都是对自我的考验，从一无所知到一步步地探索再到完成论文，老师们对我的论文指导是严谨认真负责的态度，提供科学合理的建议，让我在迷茫中看到希望，掌握了基本研究方向，在真正实践的过程中，发现并没有那么简单，在写作中遇到了很多的困难和障碍，思绪万千，也发现自身的不足之处并未之改正。同时，我也要感谢在完成论文的过程中，同学们给予的学习方法，资料等。</p>
+<p>很庆幸，在校期间遇到的同学和好朋友，无论在学习上，工作上还是生活上，都给予了我无私的帮助，陪我一起品尝求学的艰辛欢乐，受益匪浅。</p>
+<p>感谢我的家人在我的学习方面对我不懈支持，给我提供很大的帮助，让我学会了勇敢，不管结局是好是坏，依然义无反顾地去做，并且不管发生什么都坚持到底。</p>
+<p>毕业论文答辩之际，我还要衷心感谢北方工业大学大学和信息学院各位老师三年来对我悉心的培养，在这么良好和谐的生活科研环境中，我才能明白学习更多的道理和知识。祝各位老师身体健康工作顺心！愿我校的教育事业蓬勃发展！</p>
+<p>最后感谢三年求学路上所有给予过我帮助的人，感谢你们的帮助给予了我一个美好的三年时光！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://hyh16601377106.github.io">hyh</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://hyh16601377106.github.io/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/">https://hyh16601377106.github.io/增强现实空间感知/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hyh16601377106.github.io" target="_blank">像一个灯塔一样，燃烧自我，照射光明</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E7%BD%91%E7%AB%99%E6%B5%8B%E8%AF%95%E8%BF%87%E7%A8%8B/" title="网站测试过程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">网站测试过程</div></div></a></div><div class="next-post pull-right"><a href="/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/" title="Spring常用注解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Spring常用注解</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jiazai.png" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">hyh</div><div class="author-info__description">人人为我，我为人人</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/dashboard" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/monkey148?type=blog" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="mailto:2571764222@qq.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%91%98-%E8%A6%81"><span class="toc-text">*摘* *要*</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-text">*Abstract*</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-text">第一章 *绪论*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF%E5%8F%8A%E7%9B%AE%E7%9A%84"><span class="toc-text">一.1 *研究背景及目的*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-2-%E5%9B%BD%E5%86%85%E5%A4%96%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="toc-text">一.2 *国内外研究现状*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-2-1-%E7%A9%BA%E9%97%B4-%E6%B7%B1%E5%BA%A6%E6%B5%8B%E9%87%8F-%E6%96%B9%E6%B3%95"><span class="toc-text">一.2.1 *空间**深度测量**方法*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-2-2-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95"><span class="toc-text">一.2.2 *三维重建相关方法*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-2-3-%E4%B8%89%E7%BB%B4%E6%A8%A1%E5%9E%8B%E5%87%A0%E7%A7%8D%E8%A1%A8%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">一.2.3 *三维模型几种表现方式*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-2-4-%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E6%98%BE%E7%A4%BA%E5%8E%9F%E7%90%86"><span class="toc-text">一.2.4 *增强现实显示原理*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-2-5-%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9"><span class="toc-text">一.2.5 *研究内容*</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A9%BA%E9%97%B4%E6%B7%B1%E5%BA%A6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">第二章 *空间深度数据获取和预处理*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-1-%E5%87%A0%E7%A7%8D%E8%8E%B7%E5%8F%96%E6%B7%B1%E5%BA%A6%E4%BF%A1%E6%81%AF%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="toc-text">二.1 *几种获取深度信息方式对比*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-1-1-%E5%8D%95%E7%9B%AEslam%E9%87%8D%E5%BB%BA"><span class="toc-text">二.1.1 *单目slam重建*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-1-2-%E5%8F%8C%E7%9B%AE%E8%A7%86%E8%A7%89%E8%8E%B7%E5%8F%96%E6%B7%B1%E5%BA%A6"><span class="toc-text">二.1.2 *双目视觉获取深度*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-1-3-%E5%8D%95%E7%9B%AE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%8E%B7%E5%8F%96%E6%B7%B1%E5%BA%A6"><span class="toc-text">二.1.3 *单目深度学习获取深度*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-1-4-%E6%B7%B1%E5%BA%A6%E7%9B%B8%E6%9C%BA%E8%8E%B7%E5%8F%96%E6%B7%B1%E5%BA%A6"><span class="toc-text">二.1.4 *深度相机获取深度*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-2-%E6%B7%B1%E5%BA%A6-%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E5%92%8C-%E7%A9%BA%E6%B4%9E-%E5%88%86%E6%9E%90"><span class="toc-text">二.2 *深度**数据获取和**空洞**分析*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-2-1-RGBD-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D"><span class="toc-text">二.2.1 *RGBD**数据集介绍*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-2-2-%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%B6%E4%BD%9C"><span class="toc-text">二.2.2 *数据集制作*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-2-3-%E6%95%B0%E6%8D%AE%E5%99%AA%E5%A3%B0%E5%88%86%E6%9E%90"><span class="toc-text">二.2.3 *数据噪声分析*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-3-%E6%B7%B1%E5%BA%A6%E6%95%B0%E6%8D%AE%E6%BB%A4%E6%B3%A2"><span class="toc-text">二.3 *深度数据滤波*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-3-1-%E8%87%AA%E9%80%82%E5%BA%94%E4%B8%AD%E5%80%BC%E6%BB%A4%E6%B3%A2"><span class="toc-text">二.3.1 *自适应中值滤波*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-3-2-%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2"><span class="toc-text">二.3.2 *高斯滤波*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-3-3-%E5%8F%8C%E8%BE%B9%E6%BB%A4%E6%B3%A2"><span class="toc-text">二.3.3 *双边滤波*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-4-%E6%94%B9%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E6%95%B0%E6%8D%AE%E6%BB%A4%E6%B3%A2%E5%92%8C%E7%A9%BA%E6%B4%9E%E8%A1%A5%E5%85%A8%E7%AE%97%E6%B3%95"><span class="toc-text">二.4 *改进的深度数据滤波和空洞补全算法*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-5-%E6%B7%B1%E5%BA%A6%E5%9B%BE%E6%BB%A4%E6%B3%A2%E4%B8%8E%E8%A1%A5%E5%85%A8%E5%AE%9E%E9%AA%8C"><span class="toc-text">二.5 *深度图滤波与补全实验*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-6-%E6%9C%AC%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-text">二.6 *本章总结*</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8B%E5%8C%B9%E9%85%8D%E5%92%8C%E6%BB%A4%E6%B3%A2"><span class="toc-text">第三章 *图像数据特征点检测匹配和滤波*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-1-%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8B"><span class="toc-text">三.1 *特征点检测*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-1-1-ORB-%E7%AE%97%E6%B3%95"><span class="toc-text">三.1.1 *ORB**算法*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-1-2-SIFT-%E7%AE%97%E6%B3%95"><span class="toc-text">三.1.2 *SIFT**算法*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-1-3-SURF-%E7%AE%97%E6%B3%95"><span class="toc-text">三.1.3 *SURF**算法*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-2-%E7%89%B9%E5%BE%81%E5%8C%B9%E9%85%8D%E8%BF%87%E6%BB%A4"><span class="toc-text">三.2 *特征匹配过滤*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-2-1-%E5%B8%B8%E8%A7%81%E7%89%B9%E5%BE%81%E5%8C%B9%E9%85%8D"><span class="toc-text">三.2.1 *常见特征匹配*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-2-2-%E9%9A%8F%E6%9C%BA%E9%87%87%E6%A0%B7%E4%B8%80%E8%87%B4%E6%80%A7%E5%8C%B9%E9%85%8D"><span class="toc-text">三.2.2 *随机采样一致性匹配*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-3-%E6%94%B9%E8%BF%9B%E7%9A%84%E7%89%B9%E5%BE%81%E7%82%B9%E6%A3%80%E6%B5%8B%E5%92%8C%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95"><span class="toc-text">三.3 *改进的特征点检测和匹配算法*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-4-%E7%89%B9%E5%BE%81%E6%A3%80%E6%B5%8B%E5%92%8C%E7%89%B9%E5%BE%81%E5%8C%B9%E9%85%8D%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">三.4 *特征检测和特征匹配实验结果*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-5-%E6%9C%AC%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-text">三.5 *本章总结*</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%92%8C%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88%E7%9A%84%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA"><span class="toc-text">第四章 *基于深度数据和特征融合的三维重建*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-1-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6"><span class="toc-text">四.1 *三维重建算法框架*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-2-%E7%9B%B8%E6%9C%BA%E4%BD%8D%E5%A7%BF%E6%B1%82%E8%A7%A3"><span class="toc-text">四.2 *相机位姿求解*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-3-TSDF-%E6%95%B0%E6%8D%AE%E8%9E%8D%E5%90%88"><span class="toc-text">四.3 *TSDF**数据融合*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-4-%E6%9B%B2%E9%9D%A2%E9%87%8D%E5%BB%BA%E5%92%8C%E7%BA%B9%E7%90%86%E6%98%A0%E5%B0%84"><span class="toc-text">四.4 *曲面重建和纹理映射*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-5-%E5%AE%9E%E6%97%B6%E9%87%8D%E5%BB%BA%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-text">四.5 *实时重建可视化分析*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-6-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-text">四.6 *本章小结*</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%9F%BA%E4%BA%8E%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E6%98%BE%E7%A4%BA%E7%9A%84%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F"><span class="toc-text">第五章 *基于增强现实显示的空间感知系统*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-1-%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0"><span class="toc-text">五.1 *增强现实感知系统实现*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-1-1-%E8%BD%AF%E4%BB%B6%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA"><span class="toc-text">五.1.1 *软件平台搭建*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-1-2-%E7%A1%AC%E4%BB%B6%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA"><span class="toc-text">五.1.2 *硬件平台搭建*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-2-%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F%E5%92%8C%E6%B5%8B%E8%AF%95"><span class="toc-text">五.2 *系统仿真和测试*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-2-1-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA"><span class="toc-text">五.2.1 *三维重建*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-2-2-%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E6%98%BE%E7%A4%BA"><span class="toc-text">五.2.2 *增强现实显示*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-2-3-%E6%B0%94%E4%BD%93%E6%A3%80%E6%B5%8B"><span class="toc-text">五.2.3 *气体检测*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-3-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-text">五.3 *本章小结*</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="toc-text">第六章 *结论与展望*</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-1-%E4%B8%BB%E8%A6%81%E7%BB%93%E8%AE%BA"><span class="toc-text">六.1 *主要结论*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-2-%E7%A0%94%E7%A9%B6%E5%B1%95%E6%9C%9B"><span class="toc-text">六.2 *研究展望*</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E7%BD%91%E7%AB%99%E6%B5%8B%E8%AF%95%E8%BF%87%E7%A8%8B-1/" title="网站测试过程">网站测试过程</a><time datetime="2024-03-26T13:23:21.000Z" title="发表于 2024-03-26 21:23:21">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E6%9C%BA%E6%A2%B0%E6%89%8B%E8%87%82/" title="六自由度机械手臂">六自由度机械手臂</a><time datetime="2024-03-26T13:16:36.000Z" title="发表于 2024-03-26 21:16:36">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E7%BD%91%E7%AB%99%E6%B5%8B%E8%AF%95%E8%BF%87%E7%A8%8B/" title="网站测试过程">网站测试过程</a><time datetime="2024-03-26T13:15:58.000Z" title="发表于 2024-03-26 21:15:58">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%84%9F%E7%9F%A5/" title="增强现实空间感知">增强现实空间感知</a><time datetime="2024-03-26T13:15:02.000Z" title="发表于 2024-03-26 21:15:02">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/" title="Spring常用注解">Spring常用注解</a><time datetime="2024-03-26T13:14:20.000Z" title="发表于 2024-03-26 21:14:20">2024-03-26</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/default_top_img.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By hyh</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
